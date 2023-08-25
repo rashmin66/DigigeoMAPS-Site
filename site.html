@@ -41,19 +41,19 @@
 				</div>
 				<!-- button container -->
 				<div class="button-row">
-					<button class="custom-button button-1">
-						<img src="./assets/area.svg" />
-						Area
-					</button>
-					<button class="custom-button button-2">
-						<img src="./assets/Company.svg" />
-						Company
-					</button>
-					<button class="custom-button button-3">
-						<img src="./assets/Commodity.svg" />
-						Commodity
-					</button>
-				</div>
+					<a href="#container-1" class="custom-button button-1">
+					  <img src="./assets/area.svg" />
+					  Area
+					</a>
+					<a href="#container-2" class="custom-button button-2">
+					  <img src="./assets/Company.svg" />
+					  Company
+					</a>
+					<a href="#container-3" class="custom-button button-3">
+					  <img src="./assets/Commodity.svg" />
+					  Commodity
+					</a>
+				  </div>
 
 				<!-- search bar start -->
 				<div class="search-bar">
@@ -71,7 +71,7 @@
 
 
 				
-				<div class="container-1"><!-- sidebar container-1 for Area -->
+				<div class="sidebar-container" id="container-1"><!-- sidebar container-1 for Area -->
 				<!-- dropdown buttons start -->
 				<button class="dropdown-button">Featured Companies</button>
 				<button class="dropdown-button">Companies</button>
@@ -117,13 +117,13 @@
 				</div>
 			</div>
 
-			<div class="container-2"><!-- sidebar container-2 for Company -->
+			<div class="sidebar-container" id="container-2"><!-- sidebar container-2 for Company -->
 				<!-- dropdown buttons start -->
 				<button class="dropdown-button">Properties</button>
 				<button class="dropdown-button">Map Layers</button>
 
 				<!-- dropdown items-->
-				<h2 class="sub-header">Selected Company Layers</h2>
+				<div class="sub-header"><u>Selected Company Layers</u></div>
 				<div class="dropdown-items">
 					<button class="button-item">
 						<img src="./assets/image 1.svg" /><span>Featured Properties</span>
@@ -139,7 +139,7 @@
 					</button>
 				</div>
 
-				<h2 class="sub-header">All Layers</h2>
+				<div class="sub-header"><u>All Layers</u></div>
 				<div class="dropdown-items">
 					<button class="button-item">
 						<img src="./assets/game-icons_mining-helmet.svg" />Featured
@@ -160,7 +160,7 @@
 				</div>
 			</div>
 
-			<div class="container-3"><!-- sidebar container-3 for Commodity -->
+			<div class="sidebar-container" id="container-3"><!-- sidebar container-3 for Commodity -->
 				<!-- dropdown buttons start -->
 				<button class="dropdown-button">Featured Companies</button>
 				<button class="dropdown-button">Properties</button>
@@ -186,7 +186,7 @@
 				</div>
 				<button class="dropdown-button">Map Layers</button>
 
-				<h2 class="sub-header">Temp Layers</h2>
+				<div class="sub-header"><u>Temp Layers</u></div>
 				<div class="dropdown-items">
 					<button class="button-item">
 						<img src="./assets/game-icons_mining-helmet.svg" />Featured
@@ -203,7 +203,7 @@
 					</button>
 				</div>
 
-				<h2 class="sub-header">Properties</h2>
+				<div class="sub-header"><u>Properties</u></div>
 				<div class="dropdown-items">
 					<button class="button-item">
 						<img src="./assets/game-icons_mining-helmet.svg" />Featured
@@ -280,5 +280,6 @@
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 		    </div>
 			<!--*** map grid end***-->
+
 	</body>
 </html>
