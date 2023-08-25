@@ -51,12 +51,34 @@ body {
 .sidebar-container:target {
 	display: block;
 }
+/* 
+input[type="radio"] {
+	display: none;
+  }
+  
+  input[type="radio"]:checked ~ .sidebar-container {
+	display: none;
+  }
+  
+  input[type="radio"]:checked ~ #container-1 {
+	display: block;
+  }
+  
+  input[type="radio"]:checked ~ #container-2 {
+	display: block;
+  }
+  
+  input[type="radio"]:checked ~ #container-3 {
+	display: block;
+  } */
+  
 .custom-button {
 	text-decoration: none;
 	margin-top: 20px;
-	font-size: 26px;
+	font-size: 24px;
 	font-weight: 500;
 	height: 31px;
+	padding-right: 5px;
 	border-radius: 10px;
 	background-color: var(--primary-color);
 	color: var(--text-color);
@@ -69,18 +91,18 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-.custom-button:active {
+.custom-button:hover{
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 }
 .custom-button img {
 	margin-left: 2px;
-	margin-right: 2px;
+	margin-right: 5px;
 	justify-content: left;
 }
 .button-1,
 .button-2 {
-	margin-right: 20px;
+	margin-right: 10px;
 }
 
 /* searchbar styles */
@@ -133,6 +155,18 @@ body {
 .dropdown-items {
 	margin-top: 10px;
 }
+.scroll-items {
+	position: relative;
+	width: 300px;
+	overflow: hidden;
+}
+.scroll-item{
+	display: flex;
+	flex-direction: column;
+	max-height: 120px; 
+	overflow-y: scroll;
+	scrollbar-width: thin; /* For Firefox */
+} 
 .button-item {
 	margin-top: 5px !important;
 	font-size: 22px;
@@ -157,6 +191,7 @@ body {
 	height: 1.2em;
 	margin-right: 30px;
 }
+
 
 /** navbar styles **/
 .nav-bar {
