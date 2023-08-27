@@ -55,10 +55,7 @@
 					</a>
 				  </div>
 
-				
-				<div class="sidebar-container" id="container-1"><!-- sidebar container-1 for Area -->
-
-					<!-- search bar -->
+				  	<!-- search bar -->
 				<div class="search-bar">
 					<span class="search-icon icon-left"
 						><img src="./assets/Search.svg"
@@ -71,6 +68,9 @@
 						><img src="./assets/tabler_direction-sign.svg"
 					/></span>
 				</div>
+
+				
+			<div class="sidebar-container" id="container-1"><!-- sidebar container-1 for Area -->
 
 				<!-- dropdown buttons -->
 				<button class="dropdown-button">Featured Companies</button>
@@ -120,20 +120,6 @@
 
 			<div class="sidebar-container" id="container-2"><!-- sidebar container-2 for Company -->
 
-				<!-- search bar start -->
-				<div class="search-bar">
-					<span class="search-icon icon-left"
-						><img src="./assets/Search.svg"
-					/></span>
-					<input
-						type="text"
-						class="search-input"
-						placeholder="Search Company" />
-					<span class="search-icon icon-right"
-						><img src="./assets/tabler_direction-sign.svg"
-					/></span>
-				</div>
-
 				<!-- dropdown buttons start -->
 				<button class="dropdown-button">Properties</button>
 				<button class="dropdown-button">Map Layers</button>
@@ -178,19 +164,6 @@
 
 
 			<div class="sidebar-container" id="container-3"><!-- sidebar container-3 for Commodity -->
-				<!-- search bar start -->
-				<div class="search-bar">
-					<span class="search-icon icon-left"
-						><img src="./assets/Search.svg"
-					/></span>
-					<input
-						type="text"
-						class="search-input"
-						placeholder="Search Commodity" />
-					<span class="search-icon icon-right"
-						><img src="./assets/tabler_direction-sign.svg"
-					/></span>
-				</div>
 
 				<!-- dropdown buttons start -->
 				<button class="dropdown-button">Featured Companies</button>
@@ -309,17 +282,33 @@
 
 			<!--*** map grid start***-->
 			<div class="grid-item map">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26560516.639266364!2d-117.03634057418765!3d35.64619778391835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2slk!4v1692866114398!5m2!1sen!2slk"
-					width="100%"
-					height="100%"
-					style="border: 0"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
-		    </div>
+				
+				<div class="map-icons" id="map-icons">
+					<div class="map-icon" id="icon1" onclick="handleIconClick(1)">
+						<img src="./assets/map1.svg" alt="Icon 1" />
+					</div>
+					<div class="map-icon" id="icon2" onclick="handleIconClick(2)">
+						<img src="./assets/map2.svg" alt="Icon 2" />
+					</div>
+					<div class="map-icon" id="icon3" onclick="handleIconClick(3)">
+						<img src="./assets/map3.svg" alt="Icon 3" />
+					</div>
+					<div class="map-icon" id="icon4" onclick="handleIconClick(4)">
+						<img src="./assets/map4.svg" alt="Icon 4" />
+					</div>
+				</div>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26560516.639266364!2d-117.03634057418765!3d35.64619778391835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2slk!4v1692866114398!5m2!1sen!2slk"
+						width="100%"
+						height="100%"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>	
+			</div>
 			<!--*** map grid end***-->
-
+			
 
 
 			
@@ -345,6 +334,13 @@
 				 console.log(toggleButton);
 	
 		});
+
+		function handleIconClick(iconNumber) {
+    // Implement the logic you want to perform when an icon is clicked
+    console.log("Icon " + iconNumber + " clicked.");
+    // You can add more complex logic here, such as opening a modal, displaying information, etc.
+}
+
 	
 	
 				</script>

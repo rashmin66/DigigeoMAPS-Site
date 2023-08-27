@@ -47,9 +47,9 @@ body {
 .sidebar-container {
 	display: none;
 }
-.sidebar-container:target {
+/* .sidebar-container:target {
 	display: block;
-}
+} */
 
 .custom-button {
 	text-decoration: none;
@@ -70,6 +70,10 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+/* .custom-button:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+} */
 .highlighted {
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
@@ -99,7 +103,7 @@ body {
 	border: 1px solid #b8b6b644;
 	box-shadow: 0px 1px 0px 1.2px #38383844;
 	flex: 1;
-	padding-left: 10%; 
+	padding-left: 10%;
 }
 .search-icon {
 	position: absolute;
@@ -221,22 +225,29 @@ body {
 	transition: color 0.3s;
 }
 .toggle-button {
-    display: none;/* display none toggle button */
+	display: none; /* display none toggle button */
 }
 
 /** map styles **/
 .map {
 	padding: 0px 10px;
+	position: relative;
 }
+
 .map iframe {
 	border-radius: 15px !important;
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 }
-
-
-
-
+.map-icons {
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	z-index: 1;
+}
+.map-icon {
+	cursor: pointer;
+}
 
 /** media queries for mobile**/
 @media screen and (max-width: 991px) {
@@ -251,12 +262,12 @@ body {
 		order: 1;
 		display: unset;
 		align-items: center;
-		justify-content: unset
+		justify-content: unset;
 	}
-	.header-mobile{
+	.header-mobile {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;	
+		justify-content: space-around;
 	}
 	.nav-bar h1 {
 		font-size: 24px;
@@ -274,24 +285,24 @@ body {
 		margin-right: 20px;
 	}
 	.show-nav {
-		display: flex;  /* show nav links */
+		display: flex; /* show nav links */
 		align-items: center;
 		justify-content: center;
-    }
-    .toggle-button {
-        display: block; /* show toggle */
-        background: none;
-        border: none;
-        font-size: 30px;
+	}
+	.toggle-button {
+		display: block; /* show toggle */
+		background: none;
+		border: none;
+		font-size: 30px;
 		font-weight: 700;
-        cursor: pointer;
-    }
+		cursor: pointer;
+	}
 
 	/** sidebar container mobile styles **/
 	.side-bar {
-		order: 3;	
+		order: 3;
 	}
-	.sidebar-container{
+	.sidebar-container {
 		display: none;
 	}
 	.custom-button {
@@ -315,11 +326,11 @@ body {
 }
 
 /* Media query for desktop views */
-   @media (min-width: 991px) {
+@media (min-width: 991px) {
 	.logo-mobile {
 		display: none;
 	}
-	.gm-control-active {
-		display: none !important;
+	.sidebar-container {
+		display: none;
 	}
 }
