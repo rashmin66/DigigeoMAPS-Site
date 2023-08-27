@@ -41,15 +41,15 @@
 				</div>
 				<!-- button container -->
 				<div class="button-row button-row-mobile">
-					<a href="#container-1" class="custom-button button-1">
+					<a href="#container-1" class="custom-button button-1" onclick="toggleHighlight(this)">
 					  <img src="./assets/area.svg" />
 					  Area
 					</a>
-					<a href="#container-2" class="custom-button button-2">
+					<a href="#container-2" class="custom-button button-2" onclick="toggleHighlight(this)">
 					  <img src="./assets/Company.svg" />
 					  Company
 					</a>
-					<a href="#container-3" class="custom-button button-3">
+					<a href="#container-3" class="custom-button button-3" onclick="toggleHighlight(this)">
 					  <img src="./assets/Commodity.svg" />
 					  Commodity
 					</a>
@@ -315,5 +315,33 @@
 		    </div>
 			<!--*** map grid end***-->
 
+
+
+			
+			<script>
+				// functions for change custom buttons color when onlick 	
+				function toggleHighlight(button) {
+					const buttons = document.querySelectorAll(".custom-button")
+					buttons.forEach (Element  => {
+					Element.classList.remove("highlighted")
+					
+					});
+					button.classList.toggle("highlighted");
+					
+				}
+	
+			   //   function for navbar-links mobile view
+			   const toggleButton = document.getElementById("toggleButton");
+			   const navLinks = document.getElementById("navLinks");
+	
+			   toggleButton.addEventListener("click", function () {
+				console.log(navLinks);
+				 navLinks.classList.toggle("show-nav");
+				 console.log(toggleButton);
+	
+		});
+	
+	
+				</script>
 	</body>
 </html>
