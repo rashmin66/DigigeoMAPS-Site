@@ -221,7 +221,7 @@ body {
 	transition: color 0.3s;
 }
 .toggle-button {
-    display: none;
+    display: none;/* display none toggle button */
 }
 
 /** map styles **/
@@ -233,6 +233,10 @@ body {
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 }
+
+
+
+
 
 /** media queries for mobile**/
 @media screen and (max-width: 991px) {
@@ -264,18 +268,18 @@ body {
 		height: 50px;
 	}
 	.nav-links {
-		display: none;
+		display: none; /* display none nav links */
 	}
 	.nav-links li {
 		margin-right: 20px;
 	}
 	.show-nav {
-		display: flex;
+		display: flex;  /* show nav links */
 		align-items: center;
 		justify-content: center;
     }
     .toggle-button {
-        display: block;
+        display: block; /* show toggle */
         background: none;
         border: none;
         font-size: 30px;
@@ -318,8 +322,4 @@ body {
 	.gm-control-active {
 		display: none !important;
 	}
-	/* iframe .place-card {
-		display: none !important;
-		background-color: #206eb9 !important;
-	} */
 }
