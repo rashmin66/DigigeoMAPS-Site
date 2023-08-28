@@ -47,9 +47,9 @@ body {
 .sidebar-container {
 	display: none;
 }
-/* .sidebar-container:target {
+.sidebar-container:target {
 	display: block;
-} */
+}
 
 .custom-button {
 	text-decoration: none;
@@ -232,6 +232,7 @@ body {
 .map {
 	padding: 0px 10px;
 	position: relative;
+	order: 2;
 }
 
 .map iframe {
@@ -241,12 +242,20 @@ body {
 }
 .map-icons {
 	position: absolute;
-	top: 100px;
+	top: 110px;
 	left: 20px;
 	z-index: 1;
 }
 .map-icon {
 	cursor: pointer;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.mapView{
+	left: 20px;
+	position: absolute;
+
+
 }
 
 /** media queries for mobile**/
@@ -263,16 +272,17 @@ body {
 		display: unset;
 		align-items: center;
 		justify-content: unset;
+
 	}
 	.header-mobile {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 	.nav-bar h1 {
 		font-size: 24px;
 		font-weight: 700;
-		padding-left: 0px;
+		padding-left: 10%;
 	}
 	.logo {
 		width: 110px;
@@ -296,11 +306,13 @@ body {
 		font-size: 30px;
 		font-weight: 700;
 		cursor: pointer;
+		padding-right: 2%;
 	}
 
 	/** sidebar container mobile styles **/
 	.side-bar {
 		order: 3;
+		display: none;
 	}
 	.sidebar-container {
 		display: none;
@@ -309,7 +321,8 @@ body {
 		margin-top: 0px;
 	}
 	.logo-desktop {
-		display: none;
+		/* display: none; */
+		padding-bottom: 10px ;
 	}
 	.search-bar {
 		position: relative;
@@ -323,6 +336,18 @@ body {
 		position: absolute;
 		left: 0;
 	}
+	.map-icons {
+		top: 120px;
+	}
+	.mapView{
+		top: 20px;
+		left: 20px;
+        display: block;
+		position: absolute;
+		z-index: 1;
+	}
+	
+
 }
 
 /* Media query for desktop views */
@@ -331,6 +356,9 @@ body {
 		display: none;
 	}
 	.sidebar-container {
+		display: none;
+	}
+	.mapView{
 		display: none;
 	}
 }
