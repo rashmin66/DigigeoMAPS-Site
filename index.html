@@ -6,9 +6,9 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 
-		<!-- import font-styles -->
+		<!-- Google Fonts -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
 			rel="stylesheet" />
 		<link
 			href="https://fonts.googleapis.com/css?family=Dongle"
@@ -18,6 +18,9 @@
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
 		<!-- link css styles -->
 		<link
@@ -83,13 +86,31 @@
 					/></span>
 				</div>
 
+				<!-- sidebar container-1 for Area -->
 				<div
 					class="sidebar-container"
 					id="container-1">
-					<!-- sidebar container-1 for Area -->
-
-					<!-- dropdown buttons -->
+					<!-- dropdown buttons features -->
 					<button class="dropdown-button">Featured Companies</button>
+					<div class="feature dropdown-items">
+						<button class="button-item button-icon1">
+							<span class="circle circle-green"></span>Cook Inlet Region, Inc.
+						</button>
+						<button class="button-item button-icon1">
+							<span class="circle circle-blue"></span>Doyon, Limited
+						</button>
+						<button class="button-item button-icon1">
+							<span class="circle circle-red"></span>Endurance Gold Corporation
+						</button>
+						<button class="button-item button-icon1">
+							<span class="circle circle-purple"></span>Graphite One Resources
+							Inc.
+						</button>
+						<button class="button-item button-icon1">
+							<span class="circle circle-ash"></span>HighGold Mining Inc.
+						</button>
+					</div>
+
 					<button class="dropdown-button">Companies</button>
 					<button class="dropdown-button">Assets</button>
 
@@ -134,11 +155,10 @@
 					</div>
 				</div>
 
+				<!-- sidebar container-2 for Company -->
 				<div
 					class="sidebar-container"
 					id="container-2">
-					<!-- sidebar container-2 for Company -->
-
 					<!-- dropdown buttons start -->
 					<button class="dropdown-button">Properties</button>
 					<button class="dropdown-button">Map Layers</button>
@@ -182,11 +202,10 @@
 					</div>
 				</div>
 
+				<!-- sidebar container-3 for Commodity -->
 				<div
 					class="sidebar-container"
 					id="container-3">
-					<!-- sidebar container-3 for Commodity -->
-
 					<!-- dropdown buttons start -->
 					<button class="dropdown-button">Featured Companies</button>
 					<button class="dropdown-button">Properties</button>
@@ -280,7 +299,6 @@
 							alt="Logo" />
 					</div>
 					 -->
-
 						<ul
 							class="nav-links"
 							id="navLinks">
@@ -326,7 +344,7 @@
 					class="mapView"
 					id="map-View">
 					<!-- button container -->
-					<div class="button-row">
+					<div class="button-row mobile-mapView">
 						<a
 							href="#container-1"
 							class="custom-button button-1"
@@ -351,7 +369,7 @@
 					</div>
 
 					<!-- search bar -->
-					<div class="search-bar">
+					<div class="search-bar mobile-mapView">
 						<span class="search-icon icon-left"
 							><img src="./assets/Search.svg"
 						/></span>
@@ -417,6 +435,53 @@
 		</div>
 		<!-- grid container end -->
 
+		<!-- card components section start-->
+		<div class="card-div">
+			<div class="card-div1">
+				<div
+					class="bg-image hover-overlay ripple"
+					data-mdb-ripple-color="light">
+					<img
+						src="./assets/Ciri.svg"
+						class="img-fluid" />
+					<div
+						class="mask"
+						style="background-color: rgba(251, 251, 251, 0.15)"></div>
+				</div>
+				<div class="card-body">
+					<div class="card-title">Cook Inlet Region,Inc</div>
+					<p>
+						<a
+							href="#!"
+							class="card-text"
+							>www.ciri.com</a
+						>
+					</p>
+					<a
+						href="#!"
+						class="btn btn-primary"
+						>Read More</a
+					>
+				</div>
+				<div class="button-column dropdown-items">
+					<button class="button-item">
+						<span class="circle circle-green"></span>Button1
+					</button>
+					<button class="special">Unnamed Properties</button>
+					<button class="button-item">
+						<span class="circle circle-green"></span>Buttton2
+					</button>
+					<button class="button-item">
+						<span class="circle circle-green"></span>Button3
+					</button>
+					<button class="button-item">
+						<span class="circle circle-green"></span>Button4
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- card components section end-->
+
 		<script>
 			// functions for change custom buttons color when onlick
 			function toggleHighlight(button) {
@@ -451,25 +516,61 @@
 				const map = document.getElementById("map");
 				const iconImg = document.getElementById("iconImage");
 				const mapView = document.getElementById("map-View");
+				const mapIcons = document.getElementById("map-icons");
+				const mapIcon1 = document.getElementById("icon1");
+				const mapIcon2 = document.getElementById("icon2");
+				const mapIcon3 = document.getElementById("icon3");
+				const mapIcon4 = document.getElementById("icon4");
+				const isMobileView = window.innerWidth <= 991;
 
-				if (isGridChanged) {
-					gridContainer.style.gridTemplateColumns = "1fr";
-					gridContainer.style.gridTemplateRows = "1fr 10fr";
-					sideBar.style.display = "none";
-					navBar.style.order = "1";
-					map.style.order = "2";
-					iconImg.src = "./assets/map11.svg";
-					mapView.style.position = "absolute";
-					mapView.style.display = "block";
+				if (isMobileView) {
+					if (isGridChanged) {
+						gridContainer.style.gridTemplateColumns = "1fr";
+						gridContainer.style.gridTemplateRows = "1fr 10fr";
+						map.style.display = "block";
+						navBar.style.display = "block";
+						mapView.style.display = "none";
+						mapIcons.style.top = "10px";
+						mapIcon2.style.display = "none";
+						mapIcon3.style.display = "none";
+						mapIcon4.style.display = "none";
+						// Show the popup
+						sideBar.style.display = "block";
+						sideBar.style.position = "absolute";
+						sideBar.style.zIndex = "1";
+						sideBar.style.marginTop = "80px";
+					} else {
+						// Hide the popup
+						sideBar.style.display = "none";
+						// Restore original mobile grid layout
+						gridContainer.style.gridTemplateColumns = "1fr";
+						gridContainer.style.gridTemplateRows = "1fr 10fr";
+						mapView.style.display = "none";
+						mapIcon2.style.display = "block";
+						mapIcon3.style.display = "block";
+						mapIcon4.style.display = "block";
+						mapIcons.style.top = "120px";
+					}
 				} else {
-					gridContainer.style.gridTemplateColumns = "1fr 5fr";
-					gridContainer.style.gridTemplateRows = "1fr 10fr";
-					sideBar.style.order = "1";
-					sideBar.style.display = "block";
-					navBar.style.order = "2";
-					map.style.order = "3";
-					iconImg.src = "./assets/map1.svg";
-					mapView.style.display = "none";
+					if (isGridChanged) {
+						gridContainer.style.gridTemplateColumns = "1fr";
+						gridContainer.style.gridTemplateRows = "1fr 10fr";
+						sideBar.style.display = "none";
+						navBar.style.order = "1";
+						map.style.order = "2";
+						iconImg.src = "./assets/map11.svg";
+						mapView.style.position = "absolute";
+						mapView.style.display = "block";
+					} else {
+						gridContainer.style.gridTemplateColumns = "1fr 5fr";
+						gridContainer.style.gridTemplateRows = "1fr 10fr";
+						sideBar.style.order = "1";
+						sideBar.style.display = "block";
+						navBar.style.order = "2";
+						map.style.order = "3";
+						iconImg.src = "./assets/map1.svg";
+						mapView.style.display = "none";
+					}
 				}
 				isGridChanged = !isGridChanged; // Toggle the state
 			}

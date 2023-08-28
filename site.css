@@ -57,7 +57,7 @@ body {
 	font-size: 24px;
 	font-weight: 500;
 	height: 31px;
-	padding-right: 5px;
+	padding-right: 10px;
 	border-radius: 10px;
 	background-color: var(--primary-color);
 	color: var(--text-color);
@@ -188,6 +188,32 @@ body {
 	height: 1.2em;
 	margin-right: 30px;
 }
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-right: 8px;
+	margin-top: 6px;
+}
+.circle-blue {
+	background-color: #0dcaf0;
+}
+.circle-green {
+	background-color: #198754;
+}
+.circle-red {
+	background-color: #dc3545;
+}
+.circle-purple {
+	background-color: #6610f2;
+}
+.circle-ash {
+	background-color: #bdc9ce;
+}
+.feature .button-item {
+	font-size: 18px;
+	font-family: Dongle, sans-serif !important;
+}
 
 /** navbar styles **/
 .nav-bar {
@@ -243,7 +269,7 @@ body {
 .map-icons {
 	position: absolute;
 	top: 110px;
-	left: 20px;
+	left: 10px;
 	z-index: 1;
 }
 .map-icon {
@@ -251,11 +277,9 @@ body {
 	padding: 0px !important;
 	margin: 0px !important;
 }
-.mapView{
+.mapView {
 	left: 20px;
 	position: absolute;
-
-
 }
 
 /** media queries for mobile**/
@@ -272,7 +296,6 @@ body {
 		display: unset;
 		align-items: center;
 		justify-content: unset;
-
 	}
 	.header-mobile {
 		display: flex;
@@ -320,9 +343,9 @@ body {
 	.custom-button {
 		margin-top: 0px;
 	}
-	.logo-desktop {
-		/* display: none; */
-		padding-bottom: 10px ;
+	.logo {
+		padding-bottom: 10px;
+		padding-left: 30%;
 	}
 	.search-bar {
 		position: relative;
@@ -339,16 +362,18 @@ body {
 	.map-icons {
 		top: 120px;
 	}
-	.mapView{
+	.mapView {
 		top: 20px;
 		left: 20px;
-        display: block;
+		display: block;
 		position: absolute;
 		z-index: 1;
 	}
-	
-
+	.mobile-mapView {
+		display: none;
+	}
 }
+
 
 /* Media query for desktop views */
 @media (min-width: 991px) {
@@ -358,7 +383,74 @@ body {
 	.sidebar-container {
 		display: none;
 	}
-	.mapView{
+	.mapView {
 		display: none;
 	}
+}
+
+/* //card component styles */
+.card-div1 {
+	padding: 20px 30px 20px 30px;
+	border-radius: 10px;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	background-color: #ffffff;
+    border: 2px solid #b8b6b644;
+	box-shadow: 0px 2px 2px 2px #38383844;
+}
+.card-div1 .button-column {
+	background-color: #e9e8e8;
+	padding: 15px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	max-height: 120px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+}
+
+.card-div1 .button-column .button-item {
+	margin-bottom: 5px;
+	background-color: #ffffff;
+	width: 163px;
+	height: 21px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+.card-div1 .button-column .circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 8px;
+	margin-top: 3px;
+}
+.card-div1 .card-title{
+	font-size: 22px;
+	font-weight: 600;
+	font-family: Dongle, sans-serif !important;
+}
+.card-div1 .card-text{
+	font-size: 20px !important;
+	color: #000000 !important;
+	font-family: Dongle, sans-serif !important;
+}
+.card-div1 .btn{
+	font-family: Dongle, sans-serif !important;
+	background-color: #ffffff;
+	color: #000000;
+	border: 1px solid rgb(0, 0, 0);
+	font-size: 18px;
+	border-radius: 20px;
+	padding: 2px 20px 2px 20px;
+}
+.button-column .special{
+	font-family: Dongle, sans-serif !important;
+	background-color: #23619b !important;
+	margin-bottom: 5px;
+	border: 0px solid rgb(0, 0, 0);
+	height: 21px;
+	border-radius: 5px;
+	font-size: 18px !important;
 }
