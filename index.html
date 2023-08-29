@@ -853,7 +853,7 @@
 			}
 
 			//function for grid change when button click
-			let isGridChanged = false;
+			let isGridChanged = true;
 			function changeGrid() {
 				const gridContainer = document.getElementById("grid");
 				const navBar = document.getElementById("nav-bar");
@@ -875,7 +875,7 @@
 						map.style.display = "block";
 						navBar.style.display = "block";
 						mapView.style.display = "none";
-						mapIcons.style.top = "10px";
+						mapIcons.style.top = "5%";
 						mapIcon2.style.display = "none";
 						mapIcon3.style.display = "none";
 						mapIcon4.style.display = "none";
@@ -883,7 +883,7 @@
 						sideBar.style.display = "block";
 						sideBar.style.position = "absolute";
 						sideBar.style.zIndex = "1";
-						sideBar.style.marginTop = "80px";
+						sideBar.style.marginTop = "25%";
 					} else {
 						// Hide the popup
 						sideBar.style.display = "none";
@@ -894,7 +894,7 @@
 						mapIcon2.style.display = "block";
 						mapIcon3.style.display = "block";
 						mapIcon4.style.display = "block";
-						mapIcons.style.top = "120px";
+						mapIcons.style.top = "30%";
 					}
 				} else {
 					if (isGridChanged) {
