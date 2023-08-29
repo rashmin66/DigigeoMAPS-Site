@@ -37,6 +37,7 @@ body {
 	overflow-y: scroll;
 	scrollbar-width: thin; 
 	overflow-x: hidden;
+	padding: 5px;
 }
 .sub-header {
 	font-size: 24px;
@@ -477,6 +478,7 @@ body {
 	right: 50px;
 }
 .card-div1 .button-column {
+	border-radius: 5px;
 	background-color: #e9e8e8;
 	padding: 15px;
 	margin-top: 10px;
@@ -488,7 +490,7 @@ body {
 }
 
 .card-div1 .button-column .button-item {
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 	background-color: #ffffff;
 	width: 163px;
 	height: 21px;
@@ -544,6 +546,7 @@ body {
 	font-family: Dongle, sans-serif !important;
 }
 .card-div2 .button-column {
+	border-radius: 7px;
 	background-color: #e9e8e8;
 	padding: 15px;
 	margin-top: 10px;
@@ -554,7 +557,7 @@ body {
 	scrollbar-width: thin;
 }
 .card-div2 .button-column .button-item {
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 	background-color: #ffffff;
 	width: 163px;
 	height: 21px;
@@ -586,6 +589,7 @@ body {
 	width: 40%;
 }
 .card-div3 .button-column {
+	border-radius: 7px;
 	padding: 5%;
 	background-color: #e9e8e8;
 	width: 90%;
@@ -687,7 +691,7 @@ body {
 	padding-bottom: 2% !important;
 	margin: 10px;
 	width: 120px;
-	background-color: rgba(0, 0, 0, 0.575);
+	background-color: rgba(0, 0, 0, 0.877);
 	color: #fff;
 	text-align:left  !important;
 	border-radius: 6px;
@@ -708,7 +712,6 @@ body {
 	right: 100%;
 	margin-top: -5px;
 	border-width: 5px;
-	border-color: transparent black transparent transparent;
 	z-index: 1500;
 }
 .tooltip .div{
