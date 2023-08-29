@@ -105,7 +105,7 @@
 						id="feature">
 						<button
 							class="button-item button-icon1"
-							onclick="showPopUp()">
+							onclick="showPopUp1()">
 							<span class="circle circle-green"></span>Cook Inlet Region, Inc.
 						</button>
 						<button class="button-item button-icon1">
@@ -175,7 +175,7 @@
 
 					<!-- dropdown items-->
 					<div class="dropdown-items">
-						<button class="button-item button-icon1">
+						<button class="button-item button-icon1" onclick="showPopUp2()">
 							<img src="./assets/image 1.svg" /><span>Operating Mine</span>
 						</button>
 						<button class="button-item button-icon1">
@@ -498,7 +498,8 @@
 		<div
 			class="card-div"
 			>
-			<div class="card-div1" id="pop-up-card">
+			<!-- card popup for feature company -->
+			<div class="card-div1" id="pop-up-card-1">
 				<div
 					class="bg-image hover-overlay ripple"
 					data-mdb-ripple-color="light">
@@ -539,6 +540,42 @@
 						<span class="circle circle-green"></span>Button4
 					</button>
 				</div>
+			</div>
+
+<!-- card popup for asset type -->
+			<div class="card-div2" id="pop-up-card-2">
+				<div class="card-body">
+					<div class="card-title">Assest Type</div>
+				</div>
+				<button class="special">Operating Mines</button>
+
+				<div class="button-column dropdown-items">
+					<button class="button-item">
+						</span>Chandalar
+					</button>
+					<button class="button-item">
+						</span>Dawson
+					</button>
+					<button class="button-item">
+						</span>Fort Knox
+					</button>
+					<button class="button-item">
+					</span>Greens Creek
+					</button>
+					<button class="button-item">
+					</span>Kensington
+					</button>
+					<button class="button-item">
+					</span>Pogo
+					</button>
+					<button class="button-item">
+					</span>Red Dog
+					</button>
+					<button class="button-item">
+					</span>Usibelli
+					</button>
+				</div>
+			</div>
 			</div>
 		</div>
 		<!-- card components section end-->
@@ -648,10 +685,16 @@
 				iconRight.src = "./assets/cross.png";
 				
 			});
-			const popupCard = document.getElementById("pop-up-card");
-			function showPopUp() {
+			const popupCard1 = document.getElementById("pop-up-card-1");
+			function showPopUp1() {
 				
-				popupCard.style.display = "block";
+				popupCard1.style.display = "block";
+			}
+
+			const popupCard2 = document.getElementById("pop-up-card-2");
+			function showPopUp2() {
+				
+				popupCard2.style.display = "block";
 			}
 		</script>
 

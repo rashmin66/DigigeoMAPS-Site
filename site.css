@@ -404,7 +404,7 @@ body {
 	border-radius: 10px;
 	text-align: center;
 	position: absolute;
-	top: 10%;
+	top: 20%;
 	left: 30%;
 	background-color: #ffffff;
 	border: 2px solid #b8b6b644;
@@ -466,73 +466,117 @@ body {
 	font-size: 18px !important;
 }
 
+.card-div2 {
+	padding: 20px 30px 20px 30px;
+	border-radius: 10px;
+	text-align: center;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	background-color: #ffffff;
+	border: 2px solid #b8b6b644;
+	box-shadow: 0px 2px 2px 2px #38383844;
+	display: none;
+}
+.card-div2 .button-column {
+	background-color: #e9e8e8;
+	padding: 15px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	max-height: 150px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+}
+.card-div2 .button-column .button-item {
+	margin-bottom: 5px;
+	background-color: #ffffff;
+	width: 163px;
+	height: 21px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+.card-div2 .special {
+	font-family: Dongle, sans-serif !important;
+	background-color: #23619b !important;
+	margin-bottom: 5px;
+	border: 0px solid rgb(0, 0, 0);
+	height: 21px;
+	border-radius: 5px;
+	font-size: 18px !important;
+}
+
+
+
 /* tree view styles for companies list */
 .tree {
-    min-height:20px;
-    /* padding:19px;
+	min-height: 20px;
+	/* padding:19px;
     /* margin-bottom:20px;    ----------------- */
 }
 .tree li {
-    list-style-type:none;
-    margin:0;
-    padding:10px 5px 0 5px;
-    position:relative;
-    
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 5px 0 5px;
+	position: relative;
 }
-.tree li::before, .tree li::after {
-    content:'';
-    left:-15px;
-    position:absolute;
-    right:auto
+.tree li::before,
+.tree li::after {
+	content: "";
+	left: -15px;
+	position: absolute;
+	right: auto;
 }
 .tree li::before {
-    border-left:1px solid #9999999f;
-    bottom:30px;
-    height:100%;
-    top:0;
-    width:1px
+	border-left: 1px solid #9999999f;
+	bottom: 30px;
+	height: 100%;
+	top: 0;
+	width: 1px;
 }
 .tree li::after {
-   border-top:1px solid #44444454; 
-    height:20px;
-    top:20px;
-    width:15px
+	border-top: 1px solid #44444454;
+	height: 20px;
+	top: 20px;
+	width: 15px;
 }
 .tree li span {
-    /* -moz-border-radius:5px;
+	/* -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border:1px solid #999; */
-    /* border-radius:5px; */
-    display:inline-block;
-    padding:3px 8px;
-    text-decoration:none
+	/* border-radius:5px; */
+	display: inline-block;
+	padding: 3px 8px;
+	text-decoration: none;
 }
-.tree li.parent_li>span {
-    cursor:pointer
+.tree li.parent_li > span {
+	cursor: pointer;
 }
-.tree>ul>li::before, .tree>ul>li::after {
-    border:0
+.tree > ul > li::before,
+.tree > ul > li::after {
+	border: 0;
 }
 .tree li:last-child::before {
-    height:20px
+	height: 20px;
 }
-.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
-    /* background:#eee; */
-    /* border:1px solid #94a0b4; */
-    color:#000
+.tree li.parent_li > span:hover,
+.tree li.parent_li > span:hover + ul li span {
+	/* background:#eee; */
+	/* border:1px solid #94a0b4; */
+	color: #000;
 }
-.tree .link{
-     text-decoration: underline;
-     color: blue;
-     display: inline;
+.tree .link {
+	text-decoration: underline;
+	color: blue;
+	display: inline;
 }
 
 /* tool tip */
-.tooltip {
-	/* position: relative;
+/* .tooltip {
+	position: relative;
 	display: inline-block;
-	border-bottom: 1px dotted black; */
-}
+	border-bottom: 1px dotted black;
+} */
 
 .tooltip .tooltiptext {
 	visibility: hidden;
