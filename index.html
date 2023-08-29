@@ -15,9 +15,9 @@
 			rel="stylesheet" />
 
 		<!-- import fontawesome -->
-		<link
+		<!-- <link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" /> -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -82,16 +82,35 @@
 						type="text"
 						class="search-input"
 						placeholder="Search" />
-					<span class="search-icon icon-right tooltip"
-						><img
+					<span class="search-icon icon-right">
+						<img
 							src="./assets/tabler_direction-sign.svg"
-							id="icon-right" /><span class="tooltiptext">
-							<div>Tooltip text</div>
-							<div>Tooltip text</div>
-							<div>Tooltip text</div>
-							<div>Tooltip text</div>
-						</span></span
-					>
+							id="icon-right" />
+					</span>
+
+					<!-- tooltip -->
+					<div
+						class="tooltip"
+						id="tooltip">
+						<span class="tooltiptext">
+							<div></div>
+							<div>Alaska</div>
+							<div>Arizona</div>
+							<div>Athabasca Basin</div>
+							<div>Central BC</div>
+							<div>Idaho</div>
+							<div>Golden Triangle</div>
+							<div>James Bay</div>
+							<div>Krikland Lake</div>
+							<div>Mexico</div>
+							<div>Nevada</div>
+							<div>James Bay</div>
+							<div>Krikland Lake</div>
+							<div>Mexico</div>
+							<div>Nevada</div>
+							<div>Idaho</div>
+						</span>
+					</div>
 				</div>
 
 				<!-- sidebar container-1 for Area -->
@@ -111,14 +130,18 @@
 						<button class="button-item button-icon1">
 							<span class="circle circle-blue"></span>Doyon, Limited
 						</button>
-						<button class="button-item button-icon1">
+						<button
+							class="button-item button-icon1"
+							onclick="showPopUp2()">
 							<span class="circle circle-red"></span>Endurance Gold Corporation
 						</button>
 						<button class="button-item button-icon1">
 							<span class="circle circle-purple"></span>Graphite One Resources
 							Inc.
 						</button>
-						<button class="button-item button-icon1">
+						<button
+							class="button-item button-icon1"
+							onclick="showPopUp3()">
 							<span class="circle circle-ash"></span>HighGold Mining Inc.
 						</button>
 					</div>
@@ -171,14 +194,18 @@
 							</div>
 						</div>
 					</div>
-					<button class="dropdown-button">Assets</button>
 
+					<button class="dropdown-button">Assets</button>
 					<!-- dropdown items-->
 					<div class="dropdown-items">
-						<button class="button-item button-icon1" onclick="showPopUp2()">
+						<button
+							class="button-item button-icon1"
+							onclick="showAssetPopUp1()">
 							<img src="./assets/image 1.svg" /><span>Operating Mine</span>
 						</button>
-						<button class="button-item button-icon1">
+						<button
+							class="button-item button-icon1"
+							onclick="showAssetPopUp2()">
 							<img src="./assets/image 2.svg" />Deposit
 						</button>
 						<button class="button-item button-icon1">
@@ -495,11 +522,19 @@
 		<!-- grid container end -->
 
 		<!-- card components section start-->
-		<div
-			class="card-div"
-			>
-			<!-- card popup for feature company -->
-			<div class="card-div1" id="pop-up-card-1">
+		<div class="card-div">
+			<!-- card popup for feature ciri company -->
+			<div
+				class="card-div1"
+				id="pop-up-card-1">
+				<!-- popup close button -->
+				<button
+					id="close-popup1"
+					class="close-image-button">
+					<img
+						src="./assets/cross.png"
+						alt="Close" />
+				</button>
 				<div
 					class="bg-image hover-overlay ripple"
 					data-mdb-ripple-color="light">
@@ -542,40 +577,161 @@
 				</div>
 			</div>
 
-<!-- card popup for asset type -->
-			<div class="card-div2" id="pop-up-card-2">
+			<!-- card popup for feature endurance gold corparation company -->
+			<div
+				class="card-div1"
+				id="pop-up-card-2">
+				<!-- popup close button -->
+				<button
+					id="close-popup2"
+					class="close-image-button">
+					<img
+						src="./assets/cross.png"
+						alt="Close" />
+				</button>
+				<div
+					class="bg-image hover-overlay ripple"
+					data-mdb-ripple-color="light">
+					<img
+						src="./assets/eGold.svg"
+						class="img-fluid" />
+					<div
+						class="mask"
+						style="background-color: rgba(251, 251, 251, 0.15)"></div>
+				</div>
+				<div class="card-body">
+					<div class="card-title">Cook Inlet Region,Inc</div>
+					<p>
+						<a
+							href="#!"
+							class="card-text"
+							>endurancegold.com</a
+						>
+					</p>
+					<a
+						href="#!"
+						class="btn btn-primary"
+						>Read More</a
+					>
+				</div>
+				<div class="button-column dropdown-items">
+					<button class="button-item">
+						<span class="circle circle-red"></span>Elephant Mountain
+					</button>
+
+					<button class="button-item">
+						<span class="circle circle-red"></span>Trout-Wolverine
+					</button>
+					<button class="special">Unnamed Properties</button>
+					<button class="button-item">
+						<span class="circle circle-red"></span>Block 01
+					</button>
+					<button class="button-item">
+						<span class="circle circle-red"></span>Block 02
+					</button>
+				</div>
+			</div>
+
+			<!-- card popup for feature high gold mining company -->
+			<div
+				class="card-div1"
+				id="pop-up-card-3">
+				<!-- popup close button -->
+				<button
+					id="close-popup3"
+					class="close-image-button">
+					<img
+						src="./assets/cross.png"
+						alt="Close" />
+				</button>
+				<div
+					class="bg-image hover-overlay ripple"
+					data-mdb-ripple-color="light">
+					<img
+						src="./assets/HighGold.svg"
+						class="img-fluid" />
+					<div
+						class="mask"
+						style="background-color: rgba(251, 251, 251, 0.15)"></div>
+				</div>
+				<div class="card-body">
+					<div class="card-title">Cook Inlet Region,Inc</div>
+					<p>
+						<a
+							href="#!"
+							class="card-text"
+							>highgoldmining.com</a
+						>
+					</p>
+					<a
+						href="#!"
+						class="btn btn-primary"
+						>Read More</a
+					>
+				</div>
+				<div class="button-column dropdown-items">
+					<button class="button-item">
+						<span class="circle circle-ash"></span>Johnson Tract
+					</button>
+				</div>
+			</div>
+
+			<!-- card popup for asset type operating mine -->
+			<div
+				class="card-div2"
+				id="pop-up-card-4">
+				<!-- popup close button -->
+				<button
+					id="close-popup4"
+					class="close-image-button">
+					<img
+						src="./assets/cross.png"
+						alt="Close" />
+				</button>
 				<div class="card-body">
 					<div class="card-title">Assest Type</div>
 				</div>
 				<button class="special">Operating Mines</button>
 
 				<div class="button-column dropdown-items">
-					<button class="button-item">
-						</span>Chandalar
-					</button>
-					<button class="button-item">
-						</span>Dawson
-					</button>
-					<button class="button-item">
-						</span>Fort Knox
-					</button>
-					<button class="button-item">
-					</span>Greens Creek
-					</button>
-					<button class="button-item">
-					</span>Kensington
-					</button>
-					<button class="button-item">
-					</span>Pogo
-					</button>
-					<button class="button-item">
-					</span>Red Dog
-					</button>
-					<button class="button-item">
-					</span>Usibelli
-					</button>
+					<button class="button-item">Chandalar</button>
+					<button class="button-item">Dawson</button>
+					<button class="button-item">Fort Knox</button>
+					<button class="button-item">Greens Creek</button>
+					<button class="button-item">Kensington</button>
+					<button class="button-item">Pogo</button>
+					<button class="button-item">Red Dog</button>
+					<button class="button-item">Usibelli</button>
 				</div>
 			</div>
+
+			<!-- card popup for asset type operating mine -->
+			<div
+				class="card-div2"
+				id="pop-up-card-5">
+				<!-- popup close button -->
+				<button
+					id="close-popup5"
+					class="close-image-button">
+					<img
+						src="./assets/cross.png"
+						alt="Close" />
+				</button>
+				<div class="card-body">
+					<div class="card-title">Assest Type</div>
+				</div>
+				<button class="special">Deposit</button>
+
+				<div class="button-column dropdown-items">
+					<button class="button-item">AG Zone</button>
+					<button class="button-item">Anarraaq</button>
+					<button class="button-item">Arctic</button>
+					<button class="button-item">Big Nugget</button>
+					<button class="button-item">Bokan Mountain</button>
+					<button class="button-item">Bornite</button>
+					<button class="button-item">Caribou Dome</button>
+					<button class="button-item">Dongle</button>
+				</div>
 			</div>
 		</div>
 		<!-- card components section end-->
@@ -672,30 +828,101 @@
 				}
 				isGridChanged = !isGridChanged; // Toggle the state
 			}
+
 			//function for search bar
 			const searchBar = document.getElementById("searchBarr");
 			const feature = document.getElementById("feature");
 			const iconRight = document.getElementById("icon-right");
 			const companies = document.getElementById("companies");
+			const tooltip = document.getElementById("tooltip");
+              //add event listner for the search input
 			searchBar.addEventListener("input", function (event) {
 				const searchText = event.target.value;
 				console.log("Search text:", iconRight);
 				feature.style.display = "block";
 				companies.style.display = "block";
 				iconRight.src = "./assets/cross.png";
-				
 			});
+
+			// Add event listener for the cross icon click
+			iconRight.addEventListener("click", function () {
+				// Hide the elements
+				feature.style.display = "none";
+				companies.style.display = "none";
+				tooltip.style.display = "none";
+
+				// Reset the icon source
+				iconRight.src = "./assets/tabler_direction-sign.svg";
+
+				// Clear the search input field
+				searchBar.value = "";
+			});
+
+			    //add event listner for search bar click
+				searchBar.addEventListener("click", function (event) {
+					tooltip.style.display = "block";
+
+				})
+
+			// function for showing popup cards
 			const popupCard1 = document.getElementById("pop-up-card-1");
 			function showPopUp1() {
-				
 				popupCard1.style.display = "block";
 			}
 
 			const popupCard2 = document.getElementById("pop-up-card-2");
 			function showPopUp2() {
-				
 				popupCard2.style.display = "block";
 			}
+
+			const popupCard3 = document.getElementById("pop-up-card-3");
+			function showPopUp3() {
+				popupCard3.style.display = "block";
+			}
+			const popupCard4 = document.getElementById("pop-up-card-4");
+			function showAssetPopUp1() {
+				popupCard4.style.display = "block";
+			}
+			const popupCard5 = document.getElementById("pop-up-card-5");
+			function showAssetPopUp2() {
+				popupCard5.style.display = "block";
+			}
+		</script>
+
+		<!-- script for close card popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const popupCard1 = document.getElementById("pop-up-card-1");
+				const popupCard2 = document.getElementById("pop-up-card-2");
+				const popupCard3 = document.getElementById("pop-up-card-3");
+				const popupCard4 = document.getElementById("pop-up-card-4");
+				const popupCard5 = document.getElementById("pop-up-card-5");
+				const closePopupButton1 = document.getElementById("close-popup1");
+				const closePopupButton2 = document.getElementById("close-popup2");
+				const closePopupButton3 = document.getElementById("close-popup3");
+				const closePopupButton4 = document.getElementById("close-popup4");
+				const closePopupButton5 = document.getElementById("close-popup5");
+
+				closePopupButton1.addEventListener("click", function () {
+					popupCard1.style.display = "none";
+				});
+
+				closePopupButton2.addEventListener("click", function () {
+					popupCard2.style.display = "none";
+				});
+
+				closePopupButton3.addEventListener("click", function () {
+					popupCard3.style.display = "none";
+				});
+
+				closePopupButton4.addEventListener("click", function () {
+					popupCard4.style.display = "none";
+				});
+
+				closePopupButton5.addEventListener("click", function () {
+					popupCard5.style.display = "none";
+				});
+			});
 		</script>
 
 		<!-- //script for tree views for companies -->

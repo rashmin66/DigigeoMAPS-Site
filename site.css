@@ -231,6 +231,12 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	/* z-index: 1;
+	position: absolute; */
+	/* position: fixed;
+	background-color: #ffffff;
+	width: 100%;
+	 */
 }
 .nav-bar h1 {
 	font-family: Roboto, sans-serif !important;
@@ -270,6 +276,11 @@ body {
 	padding: 0px 10px;
 	position: relative;
 	order: 2;
+	/* display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	scrollbar-width: thin; */
+	/* height: 100% !important; */
 }
 
 .map iframe {
@@ -404,12 +415,19 @@ body {
 	border-radius: 10px;
 	text-align: center;
 	position: absolute;
-	top: 20%;
-	left: 30%;
+	top: 45%;
+	left: 22%;
 	background-color: #ffffff;
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 	display: none;
+}
+.close-image-button {
+	background-color: #ffffff;
+	border: 0px solid #b8b6b644;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 .card-div1 .button-column {
 	background-color: #e9e8e8;
@@ -506,8 +524,6 @@ body {
 	font-size: 18px !important;
 }
 
-
-
 /* tree view styles for companies list */
 .tree {
 	min-height: 20px;
@@ -519,6 +535,7 @@ body {
 	margin: 0;
 	padding: 10px 5px 0 5px;
 	position: relative;
+	font-family: Dongle, sans-serif !important;
 }
 .tree li::before,
 .tree li::after {
@@ -571,40 +588,31 @@ body {
 	display: inline;
 }
 
+
 /* tool tip */
-/* .tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px dotted black;
-} */
-
-.tooltip .tooltiptext {
-	visibility: hidden;
-	width: 120px;
-	background-color: rgba(0, 0, 0, 0.575);
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
+.tooltip {
 	position: absolute;
+	padding: 5% !important;
+	width: 100px;
+	margin-left: 5%;
+	display: none;
+	background-color: #333333d8;
+	color: white;
+	padding: 5px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 400;
 	z-index: 1000;
-	top: -5px;
-	left: 110%;
-}
-
-.tooltip .tooltiptext::after {
-	content: "";
-	position: absolute;
-	top: 20%;
-	right: 100%;
-	margin-top: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: transparent black transparent transparent;
-	z-index: 1000;
-}
-
-.tooltip:hover .tooltiptext {
-	visibility: visible;
-	z-index: 1000;
-}
+	top: 50%;
+	left: 100%;
+	cursor: pointer;
+  }
+  .tooltiptext div{
+     padding-bottom: 5%;
+	 font-family: Roboto, sans-serif !important;
+  }
+  .tooltiptext div:hover{
+	background-color: #8b888821;
+	
+  }
+  
