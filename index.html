@@ -52,21 +52,21 @@
 					<!-- button container -->
 					<div class="button-row">
 						<a
-							
+							id="0"
 							class="custom-button button-1"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/area.svg" />
 							Area
 						</a>
 						<a
-							
+							id="1"
 							class="custom-button button-2"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/Company.svg" />
 							Company
 						</a>
 						<a
-							
+							id="2"
 							class="custom-button button-3"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/Commodity.svg" />
@@ -147,8 +147,7 @@
 								<button
 									class="button-item button-icon1"
 									onclick="showPopUp3()">
-									<span class="circle circle-orange"></span>NANA Regional
-									Corporation Inc.
+									<span class="circle circle-ash"></span>Cook Inlet Region,Inc
 								</button>
 								<button class="button-item button-icon1">
 									<span class="circle circle-red"></span>Nova Minerals Limited.
@@ -462,18 +461,22 @@
 					id="map-View">
 					<!-- button container -->
 					<div class="button-row mobile-mapView">
-						<a class="custom-button button-1"
+						<a
+							id="0"
+							class="custom-button button-1"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/area.svg" />
 							Area
 						</a>
 						<a
+							id="1"
 							class="custom-button button-2"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/Company.svg" />
 							Company
 						</a>
 						<a
+							id="2"
 							class="custom-button button-3"
 							onclick="toggleHighlight(this)">
 							<img src="./assets/Commodity.svg" />
@@ -823,9 +826,14 @@
 			// functions for change custom buttons color when onlick
 			function toggleHighlight(button) {
 				const buttons = document.querySelectorAll(".custom-button");
-				
-				buttons.forEach((Element) => {
-					Element.classList.remove("highlighted");
+				const containers = document.querySelectorAll(".sidebar-container");
+				containers.forEach((container) => {
+					container.style.display = "none";
+				});
+				containers[button.id].style.display = "block";
+
+				buttons.forEach((element) => {
+					element.classList.remove("highlighted");
 				});
 				button.classList.toggle("highlighted");
 			}
