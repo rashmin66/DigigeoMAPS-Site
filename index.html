@@ -168,7 +168,7 @@
 													<div class="link">Properties</div></span
 												>
 												<ul>
-													<li><span> Assets</span></li>
+													<li><span class="link"> Assets</span></li>
 												</ul>
 											</li>
 										</ul>
@@ -398,11 +398,14 @@
 							</li>
 
 							<li>
-								<a href="#"> </a
-								><img
-									src="assets/ri_question-line.svg"
-									class="icon icon-1"
-									alt="icons" />
+								<a
+									href="#"
+									onclick="showNavPopUp1()">
+									<img
+										src="assets/ri_question-line.svg"
+										class="icon icon-1"
+										alt="icons" />
+								</a>
 							</li>
 
 							<li>
@@ -414,7 +417,13 @@
 								/></a>
 							</li>
 
-							<li><button class="header-button">Disclaimer</button></li>
+							<li>
+								<button
+									class="header-button"
+									onclick="showNavPopUp2()">
+									Disclaimer
+								</button>
+							</li>
 						</ul>
 					</div>
 				</nav>
@@ -733,8 +742,63 @@
 					<button class="button-item">Dongle</button>
 				</div>
 			</div>
+
+			<!-- card popup for help icon  -->
+			<div
+				class="card-div3"
+				id="pop-up-card-6">
+				<!-- popup close button -->
+				<button
+					id="close-popup6"
+					class="close-image-button-white">
+					<img
+						src="./assets/crossWhite.png"
+						alt="Close" />
+				</button>
+				<div class="card-body">
+					<div class="card-title-other">Help</div>
+				</div>
+
+				<div class="button-column dropdown-items">Comming Soon..!</div>
+			</div>
+
+			<!-- card popup for disclaimer icon  -->
+			<div
+				class="card-div3"
+				id="pop-up-card-7">
+				<!-- popup close button -->
+				<button
+					id="close-popup7"
+					class="close-image-button-white">
+					<img
+						src="./assets/crossWhite.png"
+						alt="Close" />
+				</button>
+				<div class="card-body">
+					<div class="card-title-other">Disclaimer</div>
+				</div>
+
+				<div class="button-column dropdown-items">
+					The colours of the polygons on the interactive map and the legend
+					correspond to the properties on the map that the companies have an
+					interest in. If a property is striped with two col urs, then both
+					companies represented by the colours have an interest of some type in
+					that property. Any information that is used from this map should be
+					verified by the user with the participating companies. This map has
+					been produced from the most current information available to
+					DigiGeoData. Every attempt has been made to ensure the content,
+					accuracy and completeness of this map. DigiGeoData assumes no
+					responsibility for any errors, omissions and inaccuracies in the
+					information provided. This map is copyright by DigiGeoData and
+					reprinting or any form of reproduction must have prior permission.
+				</div>
+			</div>
 		</div>
 		<!-- card components section end-->
+
+		<!-- add overlay -->
+		<div id="background-overlay" class="background-overlay"></div>
+
 
 		<script>
 			// functions for change custom buttons color when onlick
@@ -835,7 +899,7 @@
 			const iconRight = document.getElementById("icon-right");
 			const companies = document.getElementById("companies");
 			const tooltip = document.getElementById("tooltip");
-              //add event listner for the search input
+			//add event listner for the search input
 			searchBar.addEventListener("input", function (event) {
 				const searchText = event.target.value;
 				console.log("Search text:", iconRight);
@@ -858,11 +922,59 @@
 				searchBar.value = "";
 			});
 
-			    //add event listner for search bar click
-				searchBar.addEventListener("click", function (event) {
-					tooltip.style.display = "block";
+			//add event listner for search bar click
+			searchBar.addEventListener("click", function (event) {
+				tooltip.style.display = "block";
+			});
 
-				})
+			
+		</script>
+
+		<!-- script for close card popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const overlay = document.getElementById("background-overlay")
+				const popupCard1 = document.getElementById("pop-up-card-1");
+				const popupCard2 = document.getElementById("pop-up-card-2");
+				const popupCard3 = document.getElementById("pop-up-card-3");
+				const popupCard4 = document.getElementById("pop-up-card-4");
+				const popupCard5 = document.getElementById("pop-up-card-5");
+				const popupCard6 = document.getElementById("pop-up-card-6");
+				const popupCard7 = document.getElementById("pop-up-card-7");
+				const closePopupButton1 = document.getElementById("close-popup1");
+				const closePopupButton2 = document.getElementById("close-popup2");
+				const closePopupButton3 = document.getElementById("close-popup3");
+				const closePopupButton4 = document.getElementById("close-popup4");
+				const closePopupButton5 = document.getElementById("close-popup5");
+				const closePopupButton6 = document.getElementById("close-popup6");
+				const closePopupButton7 = document.getElementById("close-popup7");
+
+				closePopupButton1.addEventListener("click", function () {
+					popupCard1.style.display = "none";
+				});
+
+				closePopupButton2.addEventListener("click", function () {
+					popupCard2.style.display = "none";
+				});
+
+				closePopupButton3.addEventListener("click", function () {
+					popupCard3.style.display = "none";
+				});
+
+				closePopupButton4.addEventListener("click", function () {
+					popupCard4.style.display = "none";
+				});
+
+				closePopupButton5.addEventListener("click", function () {
+					popupCard5.style.display = "none";
+				});
+				closePopupButton6.addEventListener("click", function () {
+					popupCard6.style.display = "none";
+				});
+				closePopupButton7.addEventListener("click", function () {
+					popupCard7.style.display = "none";
+				});
+			});
 
 			// function for showing popup cards
 			const popupCard1 = document.getElementById("pop-up-card-1");
@@ -887,45 +999,19 @@
 			function showAssetPopUp2() {
 				popupCard5.style.display = "block";
 			}
+			const popupCard6 = document.getElementById("pop-up-card-6");
+			function showNavPopUp1() {
+				popupCard6.style.display = "block";
+				overlay.style.display = "block";
+			}
+			const popupCard7 = document.getElementById("pop-up-card-7");
+			function showNavPopUp2() {
+				popupCard7.style.display = "block";
+				overlay.style.display = "block";
+			}
 		</script>
 
-		<!-- script for close card popup -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const popupCard1 = document.getElementById("pop-up-card-1");
-				const popupCard2 = document.getElementById("pop-up-card-2");
-				const popupCard3 = document.getElementById("pop-up-card-3");
-				const popupCard4 = document.getElementById("pop-up-card-4");
-				const popupCard5 = document.getElementById("pop-up-card-5");
-				const closePopupButton1 = document.getElementById("close-popup1");
-				const closePopupButton2 = document.getElementById("close-popup2");
-				const closePopupButton3 = document.getElementById("close-popup3");
-				const closePopupButton4 = document.getElementById("close-popup4");
-				const closePopupButton5 = document.getElementById("close-popup5");
-
-				closePopupButton1.addEventListener("click", function () {
-					popupCard1.style.display = "none";
-				});
-
-				closePopupButton2.addEventListener("click", function () {
-					popupCard2.style.display = "none";
-				});
-
-				closePopupButton3.addEventListener("click", function () {
-					popupCard3.style.display = "none";
-				});
-
-				closePopupButton4.addEventListener("click", function () {
-					popupCard4.style.display = "none";
-				});
-
-				closePopupButton5.addEventListener("click", function () {
-					popupCard5.style.display = "none";
-				});
-			});
-		</script>
-
-		<!-- //script for tree views for companies -->
+		<!-- //script  tree views for companies -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			$(function () {

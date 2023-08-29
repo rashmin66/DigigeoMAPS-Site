@@ -231,13 +231,15 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* z-index: 1;
-	position: absolute; */
-	/* position: fixed;
-	background-color: #ffffff;
-	width: 100%;
-	 */
 }
+/* .nav-bar {
+	background-color: #ffffff;
+	overflow: hidden;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+} */
 .nav-bar h1 {
 	font-family: Roboto, sans-serif !important;
 	font-size: 32px;
@@ -319,6 +321,7 @@ body {
 		align-items: center;
 		justify-content: unset;
 	}
+	
 	.header-mobile {
 		display: flex;
 		align-items: center;
@@ -411,6 +414,7 @@ body {
 
 /* //card component styles */
 .card-div1 {
+	font-family: Dongle, sans-serif !important;
 	padding: 20px 30px 20px 30px;
 	border-radius: 10px;
 	text-align: center;
@@ -428,6 +432,13 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+.close-image-button-white {
+	background-color: #206eb9;
+	border: 0px solid #b8b6b644;
+	position: absolute;
+	top: 30px;
+	right: 50px;
 }
 .card-div1 .button-column {
 	background-color: #e9e8e8;
@@ -495,6 +506,7 @@ body {
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 	display: none;
+	font-family: Dongle, sans-serif !important;
 }
 .card-div2 .button-column {
 	background-color: #e9e8e8;
@@ -523,6 +535,45 @@ body {
 	border-radius: 5px;
 	font-size: 18px !important;
 }
+.card-div3 {
+	padding: 10px 10px 10px 10px;
+	border-radius: 10px;
+	text-align: left;
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	background-color: #ffffff;
+	border: 2px solid #b8b6b644;
+	box-shadow: 0px 2px 2px 2px #38383844;
+	display: none;
+	font-family: Dongle, sans-serif !important;
+	font-size: 24px;
+	width: 40%;
+}
+.card-div3 .button-column {
+	padding: 5%;
+	background-color: #e9e8e8;
+	width: 90%;
+	margin-top: 10px;
+	max-height: 50%;
+}
+.card-title-other {
+	background-color: #206eb9;
+	padding: 2%;
+	font-size: 32px;
+	text-align: center;
+	color: #ffffff;
+}
+.background-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 999;
+}
 
 /* tree view styles for companies list */
 .tree {
@@ -533,26 +584,25 @@ body {
 .tree li {
 	list-style-type: none;
 	margin: 0;
-	padding: 10px 5px 0 5px;
+	padding: 5px 5px 0 2px;
 	position: relative;
-	font-family: Dongle, sans-serif !important;
 }
 .tree li::before,
 .tree li::after {
 	content: "";
-	left: -15px;
+	left: -34px;
 	position: absolute;
 	right: auto;
 }
 .tree li::before {
-	border-left: 1px solid #9999999f;
+	border-left: 2px solid #9999999f;
 	bottom: 30px;
 	height: 100%;
 	top: 0;
 	width: 1px;
 }
 .tree li::after {
-	border-top: 1px solid #44444454;
+	border-top: 2px solid #44444454;
 	height: 20px;
 	top: 20px;
 	width: 15px;
@@ -563,7 +613,7 @@ body {
     border:1px solid #999; */
 	/* border-radius:5px; */
 	display: inline-block;
-	padding: 3px 8px;
+	padding: 2px 5px;
 	text-decoration: none;
 }
 .tree li.parent_li > span {
@@ -588,31 +638,40 @@ body {
 	display: inline;
 }
 
-
 /* tool tip */
-.tooltip {
+/* .tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+} */
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: rgba(0, 0, 0, 0.575);
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
 	position: absolute;
-	padding: 5% !important;
-	width: 100px;
-	margin-left: 5%;
-	display: none;
-	background-color: #333333d8;
-	color: white;
-	padding: 5px;
-	border-radius: 3px;
-	font-size: 12px;
-	font-weight: 400;
 	z-index: 1000;
-	top: 50%;
-	left: 100%;
-	cursor: pointer;
-  }
-  .tooltiptext div{
-     padding-bottom: 5%;
-	 font-family: Roboto, sans-serif !important;
-  }
-  .tooltiptext div:hover{
-	background-color: #8b888821;
-	
-  }
-  
+	top: -5px;
+	left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 20%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent black transparent transparent;
+	z-index: 1000;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	z-index: 1000;
+}
