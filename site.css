@@ -448,6 +448,12 @@ body {
 	}
 }
 
+@media screen and (max-width: 321px) {
+     .side-bar{
+		margin-top: 30%;
+	 }
+}
+
 /* Media query for desktop views */
 @media (min-width: 991px) {
 	.logo-mobile {
