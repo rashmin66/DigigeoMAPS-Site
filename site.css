@@ -32,17 +32,19 @@ body {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
-	max-height: 500px;
+	height: 90vh;
 	overflow-y: scroll;
 	scrollbar-width: thin;
 	overflow-x: hidden;
 	padding: 5px;
+	padding-bottom: 10px;
 }
 .sub-header {
 	font-size: 24px;
 	font-family: Dongle, sans-serif !important;
 	font-weight: 500;
 	text-align: center;
+	color: #206EB9;
 }
 
 /* logo styles */
@@ -437,6 +439,12 @@ body {
 	}
 	.mobile-mapView {
 		display: none;
+	}
+	.scroll-bar {
+		max-height: 450px;
+    }
+    .companies {
+	    margin-left: 5%;
 	}
 }
 
