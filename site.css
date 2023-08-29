@@ -43,6 +43,8 @@ body {
 /* buttons styles */
 .button-row {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .sidebar-container {
 	display: none;
@@ -210,21 +212,45 @@ body {
 .circle-ash {
 	background-color: #bdc9ce;
 }
+.circle-orange{
+	background-color: rgba(255, 81, 0, 0.952);
+}
+.circle-darkblue{
+	background-color: #2600ff;
+}
 .feature .button-item {
 	font-size: 18px;
 	font-family: Dongle, sans-serif !important;
+}
+.feature-none{
+	display: flex;
+	flex-direction: column;
+	max-height: 200px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
 }
 .feature {
 	display: none;
 }
 .companies {
-	margin: 5%;
+	margin-left: 10%;
+	width: 80%;
 	background-color: #ffffff;
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 	display: none;
 	font-family: Dongle, sans-serif !important;
 	font-size: 18px;
+	
+}
+.companies-center{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	max-height: 200px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
 }
 /** navbar styles **/
 .nav-bar {
@@ -647,26 +673,29 @@ body {
 
 .tooltip .tooltiptext {
 	visibility: hidden;
+	padding: 5%;
 	width: 120px;
 	background-color: rgba(0, 0, 0, 0.575);
 	color: #fff;
-	text-align: center;
+	text-align: center !important;
 	border-radius: 6px;
 	padding: 5px 0;
 	position: absolute;
 	z-index: 1000;
-	top: -5px;
-	left: 110%;
+	top: 30px;
+	left: 105%;
+	font-family: Roboto, sans-serif !important;
+	font-size: 12px;
 }
 
 .tooltip .tooltiptext::after {
+	padding: 5%;
 	content: "";
 	position: absolute;
 	top: 20%;
 	right: 100%;
 	margin-top: -5px;
 	border-width: 5px;
-	border-style: solid;
 	border-color: transparent black transparent transparent;
 	z-index: 1000;
 }
@@ -674,4 +703,7 @@ body {
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 	z-index: 1000;
+	cursor: pointer;
+	background-color: #000000a1;
+
 }

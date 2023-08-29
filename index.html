@@ -31,6 +31,8 @@
 	</head>
 
 	<body>
+		<!-- navbar -->
+
 		<!-- grid container start -->
 		<div
 			class="grid-container"
@@ -91,8 +93,8 @@
 					<!-- tooltip -->
 					<div
 						class="tooltip"
-						id="tooltip">
-						<span class="tooltiptext">
+						>
+						<span class="tooltiptext" id="tooltip">
 							<div></div>
 							<div>Alaska</div>
 							<div>Arizona</div>
@@ -119,6 +121,7 @@
 					id="container-1">
 					<!-- dropdown buttons features -->
 					<button class="dropdown-button">Featured Companies</button>
+					<div class="feature-none">
 					<div
 						class="feature dropdown-items"
 						id="feature">
@@ -142,12 +145,22 @@
 						<button
 							class="button-item button-icon1"
 							onclick="showPopUp3()">
-							<span class="circle circle-ash"></span>HighGold Mining Inc.
+							<span class="circle circle-orange"></span>NANA Regional Corporation Inc.
+						</button>
+						<button
+							class="button-item button-icon1">
+							<span class="circle circle-red"></span>Nova Minerals Limited.
+						</button>
+						<button
+							class="button-item button-icon1">
+							<span class="circle circle-darkblue"></span>Resolution Minerals Ltd.
 						</button>
 					</div>
+				</div>
 
 					<!-- tree view for companies -->
 					<button class="dropdown-button">Companies</button>
+					<div class="companies-center">
 					<div
 						class="companies"
 						id="companies">
@@ -194,6 +207,7 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
 					<button class="dropdown-button">Assets</button>
 					<!-- dropdown items-->
@@ -899,6 +913,7 @@
 			const iconRight = document.getElementById("icon-right");
 			const companies = document.getElementById("companies");
 			const tooltip = document.getElementById("tooltip");
+			const areaContainer = document.getElementById("container-1")
 			//add event listner for the search input
 			searchBar.addEventListener("input", function (event) {
 				const searchText = event.target.value;
@@ -906,6 +921,7 @@
 				feature.style.display = "block";
 				companies.style.display = "block";
 				iconRight.src = "./assets/cross.png";
+				// areaContainer.style.overflow = "hidden";
 			});
 
 			// Add event listener for the cross icon click
@@ -913,7 +929,8 @@
 				// Hide the elements
 				feature.style.display = "none";
 				companies.style.display = "none";
-				tooltip.style.display = "none";
+				tooltip.style.visibility = "hidden"
+				// areaContainer.style.overflow = "hidden"
 
 				// Reset the icon source
 				iconRight.src = "./assets/tabler_direction-sign.svg";
@@ -924,7 +941,7 @@
 
 			//add event listner for search bar click
 			searchBar.addEventListener("click", function (event) {
-				tooltip.style.display = "block";
+				tooltip.style.visibility = "visible";
 			});
 
 			
