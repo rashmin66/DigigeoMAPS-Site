@@ -29,7 +29,6 @@ body {
 	border: 2px solid #b8b6b644;
 	border-bottom: none;
 	box-shadow: 0px #38383844 !important;
-    
 }
 .scroll-bar {
 	z-index: 1;
@@ -40,16 +39,19 @@ body {
 	scrollbar-width: thin;
 	overflow-x: hidden;
 	padding: 5px;
-	
 }
 .sub-header {
+	padding: 5px;
 	font-size: 24px;
 	font-family: Dongle, sans-serif !important;
 	font-weight: 500;
-	text-align: center;
-	color: #206EB9;
+	text-align: left;
+	color: #206eb9;
+	margin-left: 10%;
 }
-
+.sub-icon{
+	margin-right: 3%;
+}
 /* logo styles */
 .logo {
 	width: 163px;
@@ -287,7 +289,7 @@ body {
 	text-align: center;
 	padding-left: 150px;
 }
-.header-mobile{
+.header-mobile {
 	display: none;
 }
 .header-button {
@@ -313,7 +315,7 @@ body {
 .toggle-button {
 	display: none; /* display none toggle button */
 }
-.logo-mobile{
+.logo-mobile {
 	display: none;
 }
 
@@ -322,7 +324,7 @@ body {
 	padding: 0px 10px;
 	position: relative;
 	order: 2;
-	height: 100% ;
+	height: 100%;
 	/* display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
@@ -380,7 +382,7 @@ body {
 		padding-left: 10%;
 		font-family: Roboto, sans-serif !important;
 	}
-	.header-desktop{
+	.header-desktop {
 		display: none;
 	}
 	.logo {
@@ -452,18 +454,21 @@ body {
 		display: none;
 	}
 	.scroll-bar {
-		max-height: 450px;
-    }
-    .companies {
-	    margin-left: 5%;
+		max-height: 500px;
+	}
+	.companies {
+		margin-left: 5%;
 	}
 }
 
 @media screen and (max-width: 321px) {
-     .side-bar{
+	.side-bar {
 		margin-top: 40% !important;
-	 }
+		max-height: 450px;
+	}
 }
+
+
 
 /* Media query for desktop views */
 @media (min-width: 991px) {
@@ -483,10 +488,8 @@ body {
 	.map iframe {
 		width: 100%;
 		height: 90%;
-		
 	}
 }
-
 
 /* //card component styles */
 .card-div1 {
@@ -562,6 +565,12 @@ body {
 	border-radius: 20px;
 	padding: 2px 20px 2px 20px;
 }
+.bluetext
+{
+	color: #2600ff;
+	font-size: 19px;
+	font-family: Dongle, sans-serif !important;
+}
 .button-column .special {
 	font-family: Dongle, sans-serif !important;
 	background-color: #23619b !important;
@@ -618,15 +627,15 @@ body {
 	border-radius: 10px;
 	text-align: left;
 	position: absolute;
-	top: 30%;
-	left: 30%;
+	top: 20%;
+	left: 40%;
 	background-color: #ffffff;
 	border: 2px solid #b8b6b644;
 	box-shadow: 0px 2px 2px 2px #38383844;
 	display: none;
 	font-family: Dongle, sans-serif !important;
 	font-size: 24px;
-	width: 40%;
+	width: 50%;
 }
 .card-div3 .button-column {
 	border-radius: 7px;

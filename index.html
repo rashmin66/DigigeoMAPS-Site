@@ -123,7 +123,7 @@
 								<button
 									class="button-item button-icon1"
 									onclick="showPopUp3()">
-									<span class="circle circle-ash"></span>Cook Inlet Region,Inc
+									<span class="circle circle-ash"></span>HighGold Mining Inc.
 								</button>
 								<button class="button-item button-icon1">
 									<span class="circle circle-red"></span>Nova Minerals Limited.
@@ -311,7 +311,7 @@
 						</div>
 						<button class="dropdown-button">Map Layers</button>
 
-						<div class="sub-header"><u>Temp Layers</u></div>
+						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Commodity Layers</u></div>
 						<div class="scroll-items">
 							<div class="dropdown-items scroll-item">
 								<button class="button-item button-icon2">
@@ -332,7 +332,7 @@
 							</div>
 						</div>
 
-						<div class="sub-header"><u>Properties</u></div>
+						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Properties</u></div>
 						<div class="scroll-items">
 							<div class="dropdown-items scroll-item">
 								<button class="button-item">
@@ -365,8 +365,12 @@
 				class="grid-item nav-container"
 				id="nav-bar">
 				<nav class="nav-bar">
-					<h1 class="header-desktop" id="nav-header">Exploration Activity Maps</h1>
-					<div class="header-mobile" >
+					<h1
+						class="header-desktop"
+						id="nav-header">
+						Exploration Activity Maps
+					</h1>
+					<div class="header-mobile">
 						<h1>Exploration Activity Maps</h1>
 						<button
 							class="toggle-button"
@@ -630,7 +634,7 @@
 						style="background-color: rgba(251, 251, 251, 0.15)"></div>
 				</div>
 				<div class="card-body">
-					<div class="card-title">Cook Inlet Region,Inc</div>
+					<div class="card-title">Endurance Gold Corporation</div>
 					<p>
 						<a
 							href="#!"
@@ -638,6 +642,7 @@
 							>endurancegold.com</a
 						>
 					</p>
+					<p>TSXV : <span class="bluetext">EDG</span></p>
 					<a
 						href="#!"
 						class="btn btn-primary"
@@ -685,12 +690,18 @@
 						style="background-color: rgba(251, 251, 251, 0.15)"></div>
 				</div>
 				<div class="card-body">
-					<div class="card-title">Cook Inlet Region,Inc</div>
+					<div class="card-title">HighGold Mining Inc.</div>
 					<p>
 						<a
 							href="#!"
 							class="card-text"
 							>highgoldmining.com</a
+						>
+					</p>
+					<p>
+						TSXV : <span class="bluetext">HIG</span> , TCQX :<span
+							class="bluetext">
+							HGGOF</span
 						>
 					</p>
 					<a
@@ -885,13 +896,12 @@
 						mapIcon3.style.display = "none";
 						mapIcon4.style.display = "none";
 						tooltip.style.display = "none";
-						
 
 						// Show the popup
 						sideBar.style.display = "block";
 						sideBar.style.position = "absolute";
 						sideBar.style.zIndex = "1";
-						sideBar.style.marginTop = "25%";
+						sideBar.style.marginTop = "20%";
 					} else {
 						// Hide the popup
 						sideBar.style.display = "none";
@@ -903,8 +913,6 @@
 						mapIcon3.style.display = "block";
 						mapIcon4.style.display = "block";
 						mapIcons.style.top = "30%";
-						
-
 					}
 				} else {
 					if (isGridChanged) {
@@ -920,7 +928,7 @@
 						logoM.style.position = "absolute";
 						logoM.style.top = "0";
 						logoM.style.left = "10px";
-						navH1.style.paddingLeft="400px";
+						navH1.style.paddingLeft = "400px";
 					} else {
 						gridContainer.style.gridTemplateColumns = "1fr 5fr";
 						gridContainer.style.gridTemplateRows = "1fr 10fr";
@@ -931,8 +939,7 @@
 						iconImg.src = "./assets/map1.svg";
 						mapView.style.display = "none";
 						logoM.style.display = "none";
-						navH1.style.paddingLeft="150px";
-						
+						navH1.style.paddingLeft = "150px";
 					}
 				}
 				isGridChanged = !isGridChanged; // Toggle the state
