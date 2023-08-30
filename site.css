@@ -54,7 +54,6 @@ body {
 .logo {
 	width: 163px;
 	height: 67px;
-	top: 12px;
 	left: 12px;
 }
 /* buttons styles */
@@ -279,7 +278,7 @@ body {
 	top: 0;
 	z-index: 100;
 } */
-.nav-bar h1 {
+.header-desktop {
 	font-family: Roboto, sans-serif !important;
 	font-size: 32px;
 	font-weight: 400;
@@ -287,6 +286,9 @@ body {
 	letter-spacing: 0em;
 	text-align: center;
 	padding-left: 150px;
+}
+.header-mobile{
+	display: none;
 }
 .header-button {
 	font-size: 24px;
@@ -372,10 +374,14 @@ body {
 		align-items: center;
 		justify-content: space-between;
 	}
-	.nav-bar h1 {
+	.header-mobile h1 {
 		font-size: 24px;
 		font-weight: 700;
 		padding-left: 10%;
+		font-family: Roboto, sans-serif !important;
+	}
+	.header-desktop{
+		display: none;
 	}
 	.logo {
 		width: 110px;

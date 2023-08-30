@@ -365,7 +365,8 @@
 				class="grid-item nav-container"
 				id="nav-bar">
 				<nav class="nav-bar">
-					<div class="header-mobile" id="nav-header">
+					<h1 class="header-desktop" id="nav-header">Exploration Activity Maps</h1>
+					<div class="header-mobile" >
 						<h1>Exploration Activity Maps</h1>
 						<button
 							class="toggle-button"
@@ -916,9 +917,7 @@
 						logoM.style.position = "absolute";
 						logoM.style.top = "0";
 						logoM.style.left = "10px";
-						logoM.style.right="100px"
-						navH1.style.left = "100px";
-						navBar.style.justifyContent ="center";
+						navH1.style.paddingLeft="400px";
 					} else {
 						gridContainer.style.gridTemplateColumns = "1fr 5fr";
 						gridContainer.style.gridTemplateRows = "1fr 10fr";
@@ -928,7 +927,8 @@
 						map.style.order = "3";
 						iconImg.src = "./assets/map1.svg";
 						mapView.style.display = "none";
-						logoM.styule.display = "none";
+						logoM.style.display = "none";
+						navH1.style.paddingLeft="150px";
 						
 					}
 				}
