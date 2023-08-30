@@ -870,6 +870,7 @@
 				const logoM = document.getElementById("logo-mobile");
 				const logoD = document.getElementById("logo-desktop");
 				const navH1 = document.getElementById("nav-header");
+				const tooltip = document.getElementById("tooltip");
 				const isMobileView = window.innerWidth <= 991;
 
 				if (isMobileView) {
@@ -883,6 +884,7 @@
 						mapIcon2.style.display = "none";
 						mapIcon3.style.display = "none";
 						mapIcon4.style.display = "none";
+						tooltip.style.display = "none";
 						
 
 						// Show the popup
@@ -901,6 +903,7 @@
 						mapIcon3.style.display = "block";
 						mapIcon4.style.display = "block";
 						mapIcons.style.top = "30%";
+						
 
 					}
 				} else {
