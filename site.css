@@ -484,11 +484,12 @@ body {
 }
 
 /* Media query for large desktop views */
-@media (min-width: 1500px) {
+@media (min-width: 1700px) {
 	.map iframe {
 		width: 100%;
-		height: 90%;
+		height: 95%;
 	}
+	
 }
 
 /* //card component styles */
