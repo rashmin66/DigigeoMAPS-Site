@@ -37,7 +37,6 @@
 		<div
 			class="grid-container"
 			id="grid">
-			
 			<!--*** side-bar grid start***-->
 			<div
 				class="grid-item side-bar"
@@ -90,8 +89,6 @@
 								src="./assets/tabler_direction-sign.svg"
 								id="icon-right" />
 						</span>
-
-						
 					</div>
 
 					<!-- sidebar container-1 for Area -->
@@ -368,7 +365,7 @@
 				class="grid-item nav-container"
 				id="nav-bar">
 				<nav class="nav-bar">
-					<div class="header-mobile">
+					<div class="header-mobile" id="nav-header">
 						<h1>Exploration Activity Maps</h1>
 						<button
 							class="toggle-button"
@@ -378,13 +375,15 @@
 					</div>
 					<div class="header">
 						<!-- logo mobile view -->
-						<!-- <div class="logo logo-mobile">	
-						<img
-							src="assets/Logo.png"
-							class="logo"
-							alt="Logo" />
-					</div>
-					 -->
+						<div
+							class="logo logo-mobile"
+							id="logo-mobile">
+							<img
+								src="assets/Logo.png"
+								class="logo"
+								alt="Logo" />
+						</div>
+
 						<ul
 							class="nav-links"
 							id="navLinks">
@@ -867,6 +866,9 @@
 				const mapIcon2 = document.getElementById("icon2");
 				const mapIcon3 = document.getElementById("icon3");
 				const mapIcon4 = document.getElementById("icon4");
+				const logoM = document.getElementById("logo-mobile");
+				const logoD = document.getElementById("logo-desktop");
+				const navH1 = document.getElementById("nav-header");
 				const isMobileView = window.innerWidth <= 991;
 
 				if (isMobileView) {
@@ -880,6 +882,7 @@
 						mapIcon2.style.display = "none";
 						mapIcon3.style.display = "none";
 						mapIcon4.style.display = "none";
+						
 
 						// Show the popup
 						sideBar.style.display = "block";
@@ -897,6 +900,7 @@
 						mapIcon3.style.display = "block";
 						mapIcon4.style.display = "block";
 						mapIcons.style.top = "30%";
+
 					}
 				} else {
 					if (isGridChanged) {
@@ -908,7 +912,13 @@
 						iconImg.src = "./assets/map11.svg";
 						mapView.style.position = "absolute";
 						mapView.style.display = "block";
-						
+						logoM.style.display = "block";
+						logoM.style.position = "absolute";
+						logoM.style.top = "0";
+						logoM.style.left = "10px";
+						logoM.style.right="100px"
+						navH1.style.left = "100px";
+						navBar.style.justifyContent ="center";
 					} else {
 						gridContainer.style.gridTemplateColumns = "1fr 5fr";
 						gridContainer.style.gridTemplateRows = "1fr 10fr";
@@ -918,6 +928,8 @@
 						map.style.order = "3";
 						iconImg.src = "./assets/map1.svg";
 						mapView.style.display = "none";
+						logoM.styule.display = "none";
+						
 					}
 				}
 				isGridChanged = !isGridChanged; // Toggle the state

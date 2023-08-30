@@ -249,7 +249,6 @@ body {
 	display: none;
 }
 .companies {
-	margin-left: 10%;
 	width: 80%;
 	background-color: #ffffff;
 	border: 2px solid #b8b6b644;
@@ -263,7 +262,6 @@ body {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	max-height: 200px;
 	overflow-y: scroll;
 	scrollbar-width: thin;
 }
@@ -312,6 +310,9 @@ body {
 }
 .toggle-button {
 	display: none; /* display none toggle button */
+}
+.logo-mobile{
+	display: none;
 }
 
 /** map styles **/
@@ -380,6 +381,7 @@ body {
 		width: 110px;
 		height: 50px;
 	}
+
 	.nav-links {
 		display: none; /* display none nav links */
 	}
@@ -459,9 +461,9 @@ body {
 
 /* Media query for desktop views */
 @media (min-width: 991px) {
-	.logo-mobile {
+	/* .logo-mobile {
 		display: none;
-	}
+	} */
 	.sidebar-container {
 		display: none;
 	}
