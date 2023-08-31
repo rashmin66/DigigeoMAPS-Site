@@ -25,344 +25,23 @@
 		<!-- link css styles -->
 		<link
 			rel="stylesheet"
-			href="site.css" />
+			href="navbar.style.css" />
+            <link
+			rel="stylesheet"
+			href="map.style.css" />  
+            <link
+			rel="stylesheet"
+			href="sidebar.style.css" />  
+            
 
 		<title>Sample Design</title>
 	</head>
 
 	<body>
-		<!-- navbar -->
-
-		<!-- grid container start -->
-		<div
-			class="grid-container"
-			id="grid">
-			<!--*** side-bar grid start***-->
+<!--*** navbar grid start***-->
+		
 			<div
-				class="grid-item side-bar"
-				id="side-bar">
-				<!-- logo  container -->
-				<div class="logo logo-desktop" id="logo-desktop">
-					<img
-						src="assets/Logo.png"
-						class="logo"
-						alt="Logo" />
-				</div>
-				<div class="scroll-bar">
-					<!-- button container -->
-					<div class="button-row">
-						<a
-							id="0"
-							class="custom-button button-1"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/area.svg" />
-							Area
-						</a>
-						<a
-							id="1"
-							class="custom-button button-2"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/Company.svg" />
-							Company
-						</a>
-						<a
-							id="2"
-							class="custom-button button-3"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/Commodity.svg" />
-							Commodity
-						</a>
-					</div>
-
-					<!-- search bar -->
-					<div class="search-bar">
-						<span class="search-icon icon-left"
-							><img src="./assets/Search.svg"
-						/></span>
-						<input
-							id="searchBarr"
-							type="text"
-							class="search-input"
-							placeholder="Search" />
-						<span class="search-icon icon-right">
-							<img
-								src="./assets/tabler_direction-sign.svg"
-								id="icon-right" />
-						</span>
-					</div>
-
-					<!-- sidebar container-1 for Area -->
-					<div
-						class="sidebar-container"
-						id="container-1">
-						<!-- dropdown buttons features -->
-						<button class="dropdown-button">Featured Companies</button>
-						<div class="feature-none">
-							<div
-								class="feature dropdown-items"
-								id="feature">
-								<button
-									class="button-item button-icon1"
-									onclick="showPopUp1()">
-									<span class="circle circle-green"></span>Cook Inlet Region,
-									Inc.
-								</button>
-								<button class="button-item button-icon1">
-									<span class="circle circle-blue"></span>Doyon, Limited
-								</button>
-								<button
-									class="button-item button-icon1"
-									onclick="showPopUp2()">
-									<span class="circle circle-red"></span>Endurance Gold
-									Corporation
-								</button>
-								<button class="button-item button-icon1">
-									<span class="circle circle-purple"></span>Graphite One
-									Resources Inc.
-								</button>
-								<button
-									class="button-item button-icon1"
-									onclick="showPopUp3()">
-									<span class="circle circle-ash"></span>HighGold Mining Inc.
-								</button>
-								<button class="button-item button-icon1">
-									<span class="circle circle-red"></span>Nova Minerals Limited.
-								</button>
-								<button class="button-item button-icon1">
-									<span class="circle circle-darkblue"></span>Resolution
-									Minerals Ltd.
-								</button>
-							</div>
-						</div>
-
-						<!-- tree view for companies -->
-						<button class="dropdown-button">Companies</button>
-						<div class="companies-center">
-							<div
-								class="companies"
-								id="companies">
-								<div
-									id="collapseDVR3"
-									class="panel-collapse collapse in">
-									<div class="tree">
-										<ul>
-											<li>
-												<span
-													><i class="fa fas fa-angle-right"></i> 0890763 Bc
-													Ltd</span
-												>
-												<ul>
-													<li>
-														<span
-															><i class="fa fas fa-angle-right"></i>
-															<div class="link">Properties</div></span
-														>
-														<ul>
-															<li><span class="link"> Assets</span></li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<span
-													><i class="fa fa-angle-right"></i> Antofagasta
-													PLC</span
-												>
-												<ul>
-													<li><span> Antofagasta</span></li>
-												</ul>
-											</li>
-											<li>
-												<span
-													><i class="fa fa-angle-right"></i> Abasca Resources
-													Inc</span
-												>
-												<ul>
-													<li><span> Abasca</span></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<button class="dropdown-button">Assets</button>
-						<!-- dropdown items-->
-						<div class="dropdown-items">
-							<button
-								class="button-item button-icon1"
-								onclick="showAssetPopUp1()">
-								<img src="./assets/image 1.svg" /><span>Operating Mine</span>
-							</button>
-							<button
-								class="button-item button-icon1"
-								onclick="showAssetPopUp2()">
-								<img src="./assets/image 2.svg" />Deposit
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 3.svg" />Zone
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 4.svg" />Historical Mine
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 5.svg" />Occurence
-							</button>
-						</div>
-						<button class="dropdown-button">Map Layers</button>
-
-						<div class="dropdown-items">
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_mining-helmet.svg" />Featured
-								Properties
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_mining.svg" />Assets
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/carbon_text-mining.svg" />Claims
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_impact-point.svg" />Property Point
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/carbon_ibm-process-mining.svg" />Property
-								Outline
-							</button>
-						</div>
-					</div>
-
-					<!-- sidebar container-2 for Company -->
-					<div
-						class="sidebar-container"
-						id="container-2">
-						<!-- dropdown buttons start -->
-						<button class="dropdown-button">Properties</button>
-						<button class="dropdown-button">Map Layers</button>
-
-						<!-- dropdown items-->
-						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Company Layers</u></div>
-						<div class="dropdown-items">
-							<button class="button-item button-icon2">
-								<img src="./assets/image 1.svg" /><span
-									>Featured Properties</span
-								>
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/image 2.svg" />Assets
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/image 3.svg" />Property Point
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/image 4.svg" />Property Outline
-							</button>
-						</div>
-
-						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>All Layers</u></div>
-						<div class="dropdown-items">
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_mining-helmet.svg" />Featured
-								Properties
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_mining.svg" />Assets
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/game-icons_impact-point.svg" />Property Point
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/carbon_ibm-process-mining.svg" />Property
-								Outline
-							</button>
-							<button class="button-item button-icon2">
-								<img src="./assets/carbon_text-mining.svg" />Claims
-							</button>
-						</div>
-					</div>
-
-					<!-- sidebar container-3 for Commodity -->
-					<div
-						class="sidebar-container"
-						id="container-3">
-						<!-- dropdown buttons start -->
-						<button class="dropdown-button">Featured Companies</button>
-						<button class="dropdown-button">Properties</button>
-						<button class="dropdown-button">Assets</button>
-
-						<!-- dropdown items-->
-						<div class="dropdown-items">
-							<button class="button-item button-icon1">
-								<img src="./assets/image 1.svg" /><span>Operating Mine</span>
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 2.svg" />Deposit
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 3.svg" />Zone
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 4.svg" />Historical Mine
-							</button>
-							<button class="button-item button-icon1">
-								<img src="./assets/image 5.svg" />Occurence
-							</button>
-						</div>
-						<button class="dropdown-button">Map Layers</button>
-
-						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Commodity Layers</u></div>
-						<div class="scroll-items">
-							<div class="dropdown-items scroll-item">
-								<button class="button-item button-icon2">
-									<img src="./assets/game-icons_mining-helmet.svg" />Featured
-									Properties
-								</button>
-								<button class="button-item button-icon2">
-									<img src="./assets/game-icons_mining.svg" />Assets
-								</button>
-								<button class="button-item button-icon2">
-									<img src="./assets/game-icons_impact-point.svg" />Property
-									Point
-								</button>
-								<button class="button-item button-icon2">
-									<img src="./assets/carbon_ibm-process-mining.svg" />Property
-									Outline
-								</button>
-							</div>
-						</div>
-
-						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Properties</u></div>
-						<div class="scroll-items">
-							<div class="dropdown-items scroll-item">
-								<button class="button-item">
-									<img src="./assets/game-icons_mining-helmet.svg" />Featured
-									Properties
-								</button>
-								<button class="button-item">
-									<img src="./assets/game-icons_impact-point.svg" />Property
-									Point
-								</button>
-								<button class="button-item">
-									<img src="./assets/carbon_ibm-process-mining.svg" />Property
-									Outline
-								</button>
-								<button class="button-item">
-									<img src="./assets/game-icons_mining.svg" />Assets
-								</button>
-								<button class="button-item">
-									<img src="./assets/carbon_text-mining.svg" />Claims
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--*** side-bar grid end***-->
-
-			<!--*** navbar grid start***-->
-			<div
-				class="grid-item nav-container"
+				class="nav-container"
 				id="nav-bar">
 				<nav class="nav-bar">
 					<!-- logo for desktop view button click  -->
@@ -373,7 +52,7 @@
 						src="assets/Logo.png"
 						class="logo"
 						alt="Logo" />
-				</div>
+				    </div>
 					<h1
 
 						class="header-desktop"
@@ -446,648 +125,731 @@
 					</div>
 				</nav>
 			</div>
+			
 			<!--*** navbar grid end***-->
 
-			<!--*** map grid start***-->
+<div class="column-div">
+
+        <!--*** side-bar grid start***-->
+        <div
+        class="side-bar column"
+        id="side-bar">
+
+        <div class="scroll-bar">
+            <!-- button container -->
+            <div class="button-row">
+                <a
+                    id="0"
+                    class="custom-button button-1"
+                    onclick="toggleHighlight(this)">
+                    <img src="./assets/area.svg" />
+                    Area
+                </a>
+                <a
+                    id="1"
+                    class="custom-button button-2"
+                    onclick="toggleHighlight(this)">
+                    <img src="./assets/Company.svg" />
+                    Company
+                </a>
+                <a
+                    id="2"
+                    class="custom-button button-3"
+                    onclick="toggleHighlight(this)">
+                    <img src="./assets/Commodity.svg" />
+                    Commodity
+                </a>
+            </div>
+
+            <!-- search bar -->
+            <div class="search-bar">
+                <span class="search-icon icon-left"
+                    ><img src="./assets/Search.svg"
+                /></span>
+                <input
+                    id="searchBarr"
+                    type="text"
+                    class="search-input"
+                    placeholder="Search" />
+                <span class="search-icon icon-right">
+                    <img
+                        src="./assets/tabler_direction-sign.svg"
+                        id="icon-right" />
+                </span>
+            </div>
+
+            <!-- sidebar container-1 for Area -->
+            <div
+                class="sidebar-container"
+                id="container-1">
+                <!-- dropdown buttons features -->
+                <button class="dropdown-button">Featured Companies</button>
+                <div class="feature-none">
+                    <div
+                        class="feature dropdown-items"
+                        id="feature">
+                        <button
+                            class="button-item button-icon1"
+                            onclick="showPopUp1()">
+                            <span class="circle circle-green"></span>Cook Inlet Region,
+                            Inc.
+                        </button>
+                        <button class="button-item button-icon1">
+                            <span class="circle circle-blue"></span>Doyon, Limited
+                        </button>
+                        <button
+                            class="button-item button-icon1"
+                            onclick="showPopUp2()">
+                            <span class="circle circle-red"></span>Endurance Gold
+                            Corporation
+                        </button>
+                        <button class="button-item button-icon1">
+                            <span class="circle circle-purple"></span>Graphite One
+                            Resources Inc.
+                        </button>
+                        <button
+                            class="button-item button-icon1"
+                            onclick="showPopUp3()">
+                            <span class="circle circle-ash"></span>HighGold Mining Inc.
+                        </button>
+                        <button class="button-item button-icon1">
+                            <span class="circle circle-red"></span>Nova Minerals Limited.
+                        </button>
+                        <button class="button-item button-icon1">
+                            <span class="circle circle-darkblue"></span>Resolution
+                            Minerals Ltd.
+                        </button>
+                    </div>
+                </div>
+
+                <!-- tree view for companies -->
+                <button class="dropdown-button">Companies</button>
+                <div class="companies-center">
+                    <div
+                        class="companies"
+                        id="companies">
+                        <div
+                            id="collapseDVR3"
+                            class="panel-collapse collapse in">
+                            <div class="tree">
+                                <ul>
+                                    <li>
+                                        <span
+                                            ><i class="fa fas fa-angle-right"></i> 0890763 Bc
+                                            Ltd</span
+                                        >
+                                        <ul>
+                                            <li>
+                                                <span
+                                                    ><i class="fa fas fa-angle-right"></i>
+                                                    <div class="link">Properties</div></span
+                                                >
+                                                <ul>
+                                                    <li><span class="link"> Assets</span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span
+                                            ><i class="fa fa-angle-right"></i> Antofagasta
+                                            PLC</span
+                                        >
+                                        <ul>
+                                            <li><span> Antofagasta</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span
+                                            ><i class="fa fa-angle-right"></i> Abasca Resources
+                                            Inc</span
+                                        >
+                                        <ul>
+                                            <li><span> Abasca</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="dropdown-button">Assets</button>
+                <!-- dropdown items-->
+                <div class="dropdown-items">
+                    <button
+                        class="button-item button-icon1"
+                        onclick="showAssetPopUp1()">
+                        <img src="./assets/image 1.svg" /><span>Operating Mine</span>
+                    </button>
+                    <button
+                        class="button-item button-icon1"
+                        onclick="showAssetPopUp2()">
+                        <img src="./assets/image 2.svg" />Deposit
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 3.svg" />Zone
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 4.svg" />Historical Mine
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 5.svg" />Occurence
+                    </button>
+                </div>
+                <button class="dropdown-button">Map Layers</button>
+
+                <div class="dropdown-items">
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_mining-helmet.svg" />Featured
+                        Properties
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_mining.svg" />Assets
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/carbon_text-mining.svg" />Claims
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_impact-point.svg" />Property Point
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/carbon_ibm-process-mining.svg" />Property
+                        Outline
+                    </button>
+                </div>
+            </div>
+            <!-- sidebar container-2 for Company -->
+            <div
+                class="sidebar-container"
+                id="container-2">
+                <!-- dropdown buttons start -->
+                <button class="dropdown-button">Properties</button>
+                <button class="dropdown-button">Map Layers</button>
+
+                <!-- dropdown items-->
+                <div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Company Layers</u></div>
+                <div class="dropdown-items">
+                    <button class="button-item button-icon2">
+                        <img src="./assets/image 1.svg" /><span
+                            >Featured Properties</span
+                        >
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/image 2.svg" />Assets
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/image 3.svg" />Property Point
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/image 4.svg" />Property Outline
+                    </button>
+                </div>
+
+                <div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>All Layers</u></div>
+                <div class="dropdown-items">
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_mining-helmet.svg" />Featured
+                        Properties
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_mining.svg" />Assets
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/game-icons_impact-point.svg" />Property Point
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/carbon_ibm-process-mining.svg" />Property
+                        Outline
+                    </button>
+                    <button class="button-item button-icon2">
+                        <img src="./assets/carbon_text-mining.svg" />Claims
+                    </button>
+                </div>
+            </div>
+
+            <!-- sidebar container-3 for Commodity -->
+            <div
+                class="sidebar-container"
+                id="container-3">
+                <!-- dropdown buttons start -->
+                <button class="dropdown-button">Featured Companies</button>
+                <button class="dropdown-button">Properties</button>
+                <button class="dropdown-button">Assets</button>
+
+                <!-- dropdown items-->
+                <div class="dropdown-items">
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 1.svg" /><span>Operating Mine</span>
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 2.svg" />Deposit
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 3.svg" />Zone
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 4.svg" />Historical Mine
+                    </button>
+                    <button class="button-item button-icon1">
+                        <img src="./assets/image 5.svg" />Occurence
+                    </button>
+                </div>
+                <button class="dropdown-button">Map Layers</button>
+
+                <div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Commodity Layers</u></div>
+                <div class="scroll-items">
+                    <div class="dropdown-items scroll-item">
+                        <button class="button-item button-icon2">
+                            <img src="./assets/game-icons_mining-helmet.svg" />Featured
+                            Properties
+                        </button>
+                        <button class="button-item button-icon2">
+                            <img src="./assets/game-icons_mining.svg" />Assets
+                        </button>
+                        <button class="button-item button-icon2">
+                            <img src="./assets/game-icons_impact-point.svg" />Property
+                            Point
+                        </button>
+                        <button class="button-item button-icon2">
+                            <img src="./assets/carbon_ibm-process-mining.svg" />Property
+                            Outline
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Properties</u></div>
+                <div class="scroll-items">
+                    <div class="dropdown-items scroll-item">
+                        <button class="button-item">
+                            <img src="./assets/game-icons_mining-helmet.svg" />Featured
+                            Properties
+                        </button>
+                        <button class="button-item">
+                            <img src="./assets/game-icons_impact-point.svg" />Property
+                            Point
+                        </button>
+                        <button class="button-item">
+                            <img src="./assets/carbon_ibm-process-mining.svg" />Property
+                            Outline
+                        </button>
+                        <button class="button-item">
+                            <img src="./assets/game-icons_mining.svg" />Assets
+                        </button>
+                        <button class="button-item">
+                            <img src="./assets/carbon_text-mining.svg" />Claims
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <!--*** side-bar grid end***-->
+
+
+
+
+      <!--*** map grid start***-->
 			<div
-				class="grid-item map"
-				id="map">
-				<!-- mapview custom-buttons -->
-				<div
-					class="mapView"
-					id="map-View">
-					<!-- button container -->
-					<div class="button-row mobile-mapView">
-						<a
-							id="0"
-							class="custom-button button-1"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/area.svg" />
-							Area
-						</a>
-						<a
-							id="1"
-							class="custom-button button-2"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/Company.svg" />
-							Company
-						</a>
-						<a
-							id="2"
-							class="custom-button button-3"
-							onclick="toggleHighlight(this)">
-							<img src="./assets/Commodity.svg" />
-							Commodity
-						</a>
-					</div>
+            class="map column"
+            id="map">
+            <!-- mapview custom-buttons -->
+            <!-- <div
+                class="mapView"
+                id="map-View">
+                
+                <div class="button-row mobile-mapView">
+                    <a
+                        id="0"
+                        class="custom-button button-1"
+                        onclick="toggleHighlight(this)">
+                        <img src="./assets/area.svg" />
+                        Area
+                    </a>
+                    <a
+                        id="1"
+                        class="custom-button button-2"
+                        onclick="toggleHighlight(this)">
+                        <img src="./assets/Company.svg" />
+                        Company
+                    </a>
+                    <a
+                        id="2"
+                        class="custom-button button-3"
+                        onclick="toggleHighlight(this)">
+                        <img src="./assets/Commodity.svg" />
+                        Commodity
+                    </a>
+                </div> -->
 
-					<!-- search bar -->
-					<div class="search-bar mobile-mapView">
-						<span class="search-icon icon-left"
-							><img src="./assets/Search.svg"
-						/></span>
-						<input
-							type="text"
-							class="search-input"
-							placeholder="Search " />
-						<span class="search-icon icon-right"
-							><img src="./assets/tabler_direction-sign.svg"
-						/></span>
-					</div>
-				</div>
+                <!-- search bar -->
+                <!-- <div class="search-bar mobile-mapView">
+                    <span class="search-icon icon-left"
+                        ><img src="./assets/Search.svg"
+                    /></span>
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search " />
+                    <span class="search-icon icon-right"
+                        ><img src="./assets/tabler_direction-sign.svg"
+                    /></span>
+                </div>
+            </div> -->
 
-				<!-- map icon list -->
-				<div
-					class="map-icons"
-					id="map-icons">
-					<!-- tooltip -->
-					<div class="tooltip">
-						<span
-							class="tooltiptext"
-							id="tooltip">
-							<div></div>
-							<div>Alaska</div>
-							<div>Arizona</div>
-							<div>Athabasca Basin</div>
-							<div>Central BC</div>
-							<div>Idaho</div>
-							<div>Golden Triangle</div>
-							<div>James Bay</div>
-							<div>Krikland Lake</div>
-							<div>Mexico</div>
-							<div>Nevada</div>
-							<div>James Bay</div>
-							<div>Krikland Lake</div>
-							<div>Mexico</div>
-							<div>Nevada</div>
-							<div>Idaho</div>
-						</span>
-					</div>
-					<div
-						class="map-icon"
-						id="icon1"
-						onclick="changeGrid()">
-						<img
-							src="./assets/map1.svg"
-							id="iconImage"
-							alt="Icon 1" />
-					</div>
-					<div
-						class="map-icon"
-						id="icon2"
-						onclick="handleIconClick(2)">
-						<img
-							src="./assets/map2.svg"
-							alt="Icon 2" />
-					</div>
-					<div
-						class="map-icon"
-						id="icon3"
-						onclick="handleIconClick(3)">
-						<img
-							src="./assets/map3.svg"
-							alt="Icon 3" />
-					</div>
-					<div
-						class="map-icon"
-						id="icon4"
-						onclick="handleIconClick(4)">
-						<img
-							src="./assets/map4.svg"
-							alt="Icon 4" />
-					</div>
-				</div>
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26560516.639266364!2d-117.03634057418765!3d35.64619778391835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2slk!4v1692866114398!5m2!1sen!2slk"
-					style="border: 0"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
-			<!--*** map grid end***-->
-		</div>
-		<!-- grid container end -->
+            <!-- map icon list -->
+            <div
+                class="map-icons"
+                id="map-icons">
+                <!-- tooltip -->
+                <div class="tooltip">
+                    <span
+                        class="tooltiptext"
+                        id="tooltip">
+                        <div></div>
+                        <div>Alaska</div>
+                        <div>Arizona</div>
+                        <div>Athabasca Basin</div>
+                        <div>Central BC</div>
+                        <div>Idaho</div>
+                        <div>Golden Triangle</div>
+                        <div>James Bay</div>
+                        <div>Krikland Lake</div>
+                        <div>Mexico</div>
+                        <div>Nevada</div>
+                        <div>James Bay</div>
+                        <div>Krikland Lake</div>
+                        <div>Mexico</div>
+                        <div>Nevada</div>
+                        <div>Idaho</div>
+                    </span>
+                </div>
+                <div
+                    class="map-icon"
+                    id="icon1"
+                    onclick="changeGrid()">
+                    <img
+                        src="./assets/map1.svg"
+                        id="iconImage"
+                        alt="Icon 1" />
+                </div>
+                <div
+                    class="map-icon map-icons-list"
+                    id="icon2"
+                    onclick="handleIconClick(2)">
+                    <img
+                        src="./assets/map2.svg"
+                        alt="Icon 2" />
+                </div>
+                <div
+                    class="map-icon map-icons-list"
+                    class="map-icon "
+                    id="icon3"
+                    onclick="handleIconClick(3)">
+                    <img
+                        src="./assets/map3.svg"
+                        alt="Icon 3" />
+                </div>
+                <div
+                    class="map-icon map-icons-list"
+                    class="map-icon "
+                    id="icon4"
+                    onclick="handleIconClick(4)">
+                    <img
+                        src="./assets/map4.svg"
+                        alt="Icon 4" />
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26560516.639266364!2d-117.03634057418765!3d35.64619778391835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2slk!4v1692866114398!5m2!1sen!2slk"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <!--*** map grid end***-->
+   </div>
 
-		<!-- card components section start-->
-		<div class="card-div">
-			<!-- card popup for feature ciri company -->
-			<div
-				class="card-div1"
-				id="pop-up-card-1">
-				<!-- popup close button -->
-				<button
-					id="close-popup1"
-					class="close-image-button">
-					<img
-						src="./assets/cross.png"
-						alt="Close" />
-				</button>
-				<div
-					class="bg-image hover-overlay ripple"
-					data-mdb-ripple-color="light">
-					<img
-						src="./assets/Ciri.svg"
-						class="img-fluid" />
-					<div
-						class="mask"
-						style="background-color: rgba(251, 251, 251, 0.15)"></div>
-				</div>
-				<div class="card-body">
-					<div class="card-title">Cook Inlet Region,Inc</div>
-					<p>
-						<a
-							href="#!"
-							class="card-text"
-							>www.ciri.com</a
-						>
-					</p>
-					<a
-						href="#!"
-						class="btn btn-primary"
-						>Read More</a
-					>
-				</div>
-				<div class="button-column dropdown-items">
-					<button class="button-item">
-						<span class="circle circle-green"></span>Button1
-					</button>
-					<button class="special">Unnamed Properties</button>
-					<button class="button-item">
-						<span class="circle circle-green"></span>Buttton2
-					</button>
-					<button class="button-item">
-						<span class="circle circle-green"></span>Button3
-					</button>
-					<button class="button-item">
-						<span class="circle circle-green"></span>Button4
-					</button>
-				</div>
-			</div>
+<!-- card components section start-->
+<div class="card-div">
+    <!-- card popup for feature ciri company -->
+    <div
+        class="card-div1"
+        id="pop-up-card-1">
+        <!-- popup close button -->
+        <button
+            id="close-popup1"
+            class="close-image-button">
+            <img
+                src="./assets/cross.png"
+                alt="Close" />
+        </button>
+        <div
+            class="bg-image hover-overlay ripple"
+            data-mdb-ripple-color="light">
+            <img
+                src="./assets/Ciri.svg"
+                class="img-fluid" />
+            <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"></div>
+        </div>
+        <div class="card-body">
+            <div class="card-title">Cook Inlet Region,Inc</div>
+            <p>
+                <a
+                    href="#!"
+                    class="card-text"
+                    >www.ciri.com</a
+                >
+            </p>
+            <a
+                href="#!"
+                class="btn btn-primary"
+                >Read More</a
+            >
+        </div>
+        <div class="button-column dropdown-items">
+            <button class="button-item">
+                <span class="circle circle-green"></span>Button1
+            </button>
+            <button class="special">Unnamed Properties</button>
+            <button class="button-item">
+                <span class="circle circle-green"></span>Buttton2
+            </button>
+            <button class="button-item">
+                <span class="circle circle-green"></span>Button3
+            </button>
+            <button class="button-item">
+                <span class="circle circle-green"></span>Button4
+            </button>
+        </div>
+    </div>
 
-			<!-- card popup for feature endurance gold corparation company -->
-			<div
-				class="card-div1"
-				id="pop-up-card-2">
-				<!-- popup close button -->
-				<button
-					id="close-popup2"
-					class="close-image-button">
-					<img
-						src="./assets/cross.png"
-						alt="Close" />
-				</button>
-				<div
-					class="bg-image hover-overlay ripple"
-					data-mdb-ripple-color="light">
-					<img
-						src="./assets/eGold.svg"
-						class="img-fluid" />
-					<div
-						class="mask"
-						style="background-color: rgba(251, 251, 251, 0.15)"></div>
-				</div>
-				<div class="card-body">
-					<div class="card-title">Endurance Gold Corporation</div>
-					<p>
-						<a
-							href="#!"
-							class="card-text"
-							>endurancegold.com</a
-						>
-					</p>
-					<p>TSXV : <span class="bluetext">EDG</span></p>
-					<a
-						href="#!"
-						class="btn btn-primary"
-						>Read More</a
-					>
-				</div>
-				<div class="button-column dropdown-items">
-					<button class="button-item">
-						<span class="circle circle-red"></span>Elephant Mountain
-					</button>
+    <!-- card popup for feature endurance gold corparation company -->
+    <div
+        class="card-div1"
+        id="pop-up-card-2">
+        <!-- popup close button -->
+        <button
+            id="close-popup2"
+            class="close-image-button">
+            <img
+                src="./assets/cross.png"
+                alt="Close" />
+        </button>
+        <div
+            class="bg-image hover-overlay ripple"
+            data-mdb-ripple-color="light">
+            <img
+                src="./assets/eGold.svg"
+                class="img-fluid" />
+            <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"></div>
+        </div>
+        <div class="card-body">
+            <div class="card-title">Endurance Gold Corporation</div>
+            <p>
+                <a
+                    href="#!"
+                    class="card-text"
+                    >endurancegold.com</a
+                >
+            </p>
+            <p>TSXV : <span class="bluetext">EDG</span></p>
+            <a
+                href="#!"
+                class="btn btn-primary"
+                >Read More</a
+            >
+        </div>
+        <div class="button-column dropdown-items">
+            <button class="button-item">
+                <span class="circle circle-red"></span>Elephant Mountain
+            </button>
 
-					<button class="button-item">
-						<span class="circle circle-red"></span>Trout-Wolverine
-					</button>
-					<button class="special">Unnamed Properties</button>
-					<button class="button-item">
-						<span class="circle circle-red"></span>Block 01
-					</button>
-					<button class="button-item">
-						<span class="circle circle-red"></span>Block 02
-					</button>
-				</div>
-			</div>
+            <button class="button-item">
+                <span class="circle circle-red"></span>Trout-Wolverine
+            </button>
+            <button class="special">Unnamed Properties</button>
+            <button class="button-item">
+                <span class="circle circle-red"></span>Block 01
+            </button>
+            <button class="button-item">
+                <span class="circle circle-red"></span>Block 02
+            </button>
+        </div>
+    </div>
 
-			<!-- card popup for feature high gold mining company -->
-			<div
-				class="card-div1"
-				id="pop-up-card-3">
-				<!-- popup close button -->
-				<button
-					id="close-popup3"
-					class="close-image-button">
-					<img
-						src="./assets/cross.png"
-						alt="Close" />
-				</button>
-				<div
-					class="bg-image hover-overlay ripple"
-					data-mdb-ripple-color="light">
-					<img
-						src="./assets/HighGold.svg"
-						class="img-fluid" />
-					<div
-						class="mask"
-						style="background-color: rgba(251, 251, 251, 0.15)"></div>
-				</div>
-				<div class="card-body">
-					<div class="card-title">HighGold Mining Inc.</div>
-					<p>
-						<a
-							href="#!"
-							class="card-text"
-							>highgoldmining.com</a
-						>
-					</p>
-					<p>
-						TSXV : <span class="bluetext">HIG</span> , TCQX :<span
-							class="bluetext">
-							HGGOF</span
-						>
-					</p>
-					<a
-						href="#!"
-						class="btn btn-primary"
-						>Read More</a
-					>
-				</div>
-				<div class="button-column dropdown-items">
-					<button class="button-item">
-						<span class="circle circle-ash"></span>Johnson Tract
-					</button>
-				</div>
-			</div>
+    <!-- card popup for feature high gold mining company -->
+    <div
+        class="card-div1"
+        id="pop-up-card-3">
+        <!-- popup close button -->
+        <button
+            id="close-popup3"
+            class="close-image-button">
+            <img
+                src="./assets/cross.png"
+                alt="Close" />
+        </button>
+        <div
+            class="bg-image hover-overlay ripple"
+            data-mdb-ripple-color="light">
+            <img
+                src="./assets/HighGold.svg"
+                class="img-fluid" />
+            <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"></div>
+        </div>
+        <div class="card-body">
+            <div class="card-title">HighGold Mining Inc.</div>
+            <p>
+                <a
+                    href="#!"
+                    class="card-text"
+                    >highgoldmining.com</a
+                >
+            </p>
+            <p>
+                TSXV : <span class="bluetext">HIG</span> , TCQX :<span
+                    class="bluetext">
+                    HGGOF</span
+                >
+            </p>
+            <a
+                href="#!"
+                class="btn btn-primary"
+                >Read More</a
+            >
+        </div>
+        <div class="button-column dropdown-items">
+            <button class="button-item">
+                <span class="circle circle-ash"></span>Johnson Tract
+            </button>
+        </div>
+    </div>
 
-			<!-- card popup for asset type operating mine -->
-			<div
-				class="card-div2"
-				id="pop-up-card-4">
-				<!-- popup close button -->
-				<button
-					id="close-popup4"
-					class="close-image-button">
-					<img
-						src="./assets/cross.png"
-						alt="Close" />
-				</button>
-				<div class="card-body">
-					<div class="card-title">Assest Type</div>
-				</div>
-				<button class="special">Operating Mines</button>
+    <!-- card popup for asset type operating mine -->
+    <div
+        class="card-div2"
+        id="pop-up-card-4">
+        <!-- popup close button -->
+        <button
+            id="close-popup4"
+            class="close-image-button">
+            <img
+                src="./assets/cross.png"
+                alt="Close" />
+        </button>
+        <div class="card-body">
+            <div class="card-title">Assest Type</div>
+        </div>
+        <button class="special">Operating Mines</button>
 
-				<div class="button-column dropdown-items">
-					<button class="button-item">Chandalar</button>
-					<button class="button-item">Dawson</button>
-					<button class="button-item">Fort Knox</button>
-					<button class="button-item">Greens Creek</button>
-					<button class="button-item">Kensington</button>
-					<button class="button-item">Pogo</button>
-					<button class="button-item">Red Dog</button>
-					<button class="button-item">Usibelli</button>
-				</div>
-			</div>
+        <div class="button-column dropdown-items">
+            <button class="button-item">Chandalar</button>
+            <button class="button-item">Dawson</button>
+            <button class="button-item">Fort Knox</button>
+            <button class="button-item">Greens Creek</button>
+            <button class="button-item">Kensington</button>
+            <button class="button-item">Pogo</button>
+            <button class="button-item">Red Dog</button>
+            <button class="button-item">Usibelli</button>
+        </div>
+    </div>
 
-			<!-- card popup for asset type operating mine -->
-			<div
-				class="card-div2"
-				id="pop-up-card-5">
-				<!-- popup close button -->
-				<button
-					id="close-popup5"
-					class="close-image-button">
-					<img
-						src="./assets/cross.png"
-						alt="Close" />
-				</button>
-				<div class="card-body">
-					<div class="card-title">Assest Type</div>
-				</div>
-				<button class="special">Deposit</button>
+    <!-- card popup for asset type operating mine -->
+    <div
+        class="card-div2"
+        id="pop-up-card-5">
+        <!-- popup close button -->
+        <button
+            id="close-popup5"
+            class="close-image-button">
+            <img
+                src="./assets/cross.png"
+                alt="Close" />
+        </button>
+        <div class="card-body">
+            <div class="card-title">Assest Type</div>
+        </div>
+        <button class="special">Deposit</button>
 
-				<div class="button-column dropdown-items">
-					<button class="button-item">AG Zone</button>
-					<button class="button-item">Anarraaq</button>
-					<button class="button-item">Arctic</button>
-					<button class="button-item">Big Nugget</button>
-					<button class="button-item">Bokan Mountain</button>
-					<button class="button-item">Bornite</button>
-					<button class="button-item">Caribou Dome</button>
-					<button class="button-item">Dongle</button>
-				</div>
-			</div>
+        <div class="button-column dropdown-items">
+            <button class="button-item">AG Zone</button>
+            <button class="button-item">Anarraaq</button>
+            <button class="button-item">Arctic</button>
+            <button class="button-item">Big Nugget</button>
+            <button class="button-item">Bokan Mountain</button>
+            <button class="button-item">Bornite</button>
+            <button class="button-item">Caribou Dome</button>
+            <button class="button-item">Dongle</button>
+        </div>
+    </div>
 
-			<!-- card popup for help icon  -->
-			<div
-				class="card-div3"
-				id="pop-up-card-6">
-				<!-- popup close button -->
-				<button
-					id="close-popup6"
-					class="close-image-button-white">
-					<img
-						src="./assets/crossWhite.png"
-						alt="Close" />
-				</button>
-				<div class="card-body">
-					<div class="card-title-other">Help</div>
-				</div>
+    <!-- card popup for help icon  -->
+    <div
+        class="card-div3"
+        id="pop-up-card-6">
+        <!-- popup close button -->
+        <button
+            id="close-popup6"
+            class="close-image-button-white">
+            <img
+                src="./assets/crossWhite.png"
+                alt="Close" />
+        </button>
+        <div class="card-body">
+            <div class="card-title-other">Help</div>
+        </div>
 
-				<div class="button-column dropdown-items">Comming Soon..!</div>
-			</div>
+        <div class="button-column dropdown-items">Comming Soon..!</div>
+    </div>
 
-			<!-- card popup for disclaimer icon  -->
-			<div
-				class="card-div3"
-				id="pop-up-card-7">
-				<!-- popup close button -->
-				<button
-					id="close-popup7"
-					class="close-image-button-white">
-					<img
-						src="./assets/crossWhite.png"
-						alt="Close" />
-				</button>
-				<div class="card-body">
-					<div class="card-title-other">Disclaimer</div>
-				</div>
+    <!-- card popup for disclaimer icon  -->
+    <div
+        class="card-div3"
+        id="pop-up-card-7">
+        <!-- popup close button -->
+        <button
+            id="close-popup7"
+            class="close-image-button-white">
+            <img
+                src="./assets/crossWhite.png"
+                alt="Close" />
+        </button>
+        <div class="card-body">
+            <div class="card-title-other">Disclaimer</div>
+        </div>
 
-				<div class="button-column dropdown-items">
-					The colours of the polygons on the interactive map and the legend
-					correspond to the properties on the map that the companies have an
-					interest in. If a property is striped with two col urs, then both
-					companies represented by the colours have an interest of some type in
-					that property. Any information that is used from this map should be
-					verified by the user with the participating companies. This map has
-					been produced from the most current information available to
-					DigiGeoData. Every attempt has been made to ensure the content,
-					accuracy and completeness of this map. DigiGeoData assumes no
-					responsibility for any errors, omissions and inaccuracies in the
-					information provided. This map is copyright by DigiGeoData and
-					reprinting or any form of reproduction must have prior permission.
-				</div>
-			</div>
-		</div>
-		<!-- card components section end-->
+        <div class="button-column dropdown-items">
+            The colours of the polygons on the interactive map and the legend
+            correspond to the properties on the map that the companies have an
+            interest in. If a property is striped with two col urs, then both
+            companies represented by the colours have an interest of some type in
+            that property. Any information that is used from this map should be
+            verified by the user with the participating companies. This map has
+            been produced from the most current information available to
+            DigiGeoData. Every attempt has been made to ensure the content,
+            accuracy and completeness of this map. DigiGeoData assumes no
+            responsibility for any errors, omissions and inaccuracies in the
+            information provided. This map is copyright by DigiGeoData and
+            reprinting or any form of reproduction must have prior permission.
+        </div>
+    </div>
+</div>
+<!-- card components section end-->
 
-		<!-- add overlay -->
-		<div
-			id="background-overlay"
-			class="background-overlay"></div>
-
-		<script>
-			// functions for change custom buttons color when onlick
-			function toggleHighlight(button) {
-				const buttons = document.querySelectorAll(".custom-button");
-				const containers = document.querySelectorAll(".sidebar-container");
-				containers.forEach((container) => {
-					container.style.display = "none";
-				});
-				containers[button.id].style.display = "block";
-
-				buttons.forEach((element) => {
-					element.classList.remove("highlighted");
-				});
-				button.classList.toggle("highlighted");
-			}
-
-			//   function for navbar-links mobile view
-			const toggleButton = document.getElementById("toggleButton");
-			const navLinks = document.getElementById("navLinks");
-
-			toggleButton.addEventListener("click", function () {
-				console.log(navLinks);
-				navLinks.classList.toggle("show-nav");
-				console.log(toggleButton);
-			});
-
-			//function for mapicon handle
-			function handleIconClick(iconNumber) {
-				console.log("Icon " + iconNumber + " clicked.");
-			}
-
-			//function for grid change when button click
-			let isGridChanged = true;
-			function changeGrid() {
-				const gridContainer = document.getElementById("grid");
-				const navBar = document.getElementById("nav-bar");
-				const sideBar = document.getElementById("side-bar");
-				const map = document.getElementById("map");
-				const iconImg = document.getElementById("iconImage");
-				const mapView = document.getElementById("map-View");
-				const mapIcons = document.getElementById("map-icons");
-				const mapIcon1 = document.getElementById("icon1");
-				const mapIcon2 = document.getElementById("icon2");
-				const mapIcon3 = document.getElementById("icon3");
-				const mapIcon4 = document.getElementById("icon4");
-				const logoM = document.getElementById("logo-mobile");
-				const logoD = document.getElementById("logo-desktop");
-				const navH1 = document.getElementById("nav-header");
-				const tooltip = document.getElementById("tooltip");
-				const isMobileView = window.innerWidth <= 991;
-
-				if (isMobileView) {
-					if (isGridChanged) {
-						gridContainer.style.gridTemplateColumns = "1fr";
-						gridContainer.style.gridTemplateRows = "1fr 10fr";
-						map.style.display = "block";
-						navBar.style.display = "block";
-						mapView.style.display = "none";
-						mapIcons.style.top = "2%";
-						mapIcon1.style.paddingBottom = "5px";
-						mapIcons.style.left="300px";
-						mapIcon2.style.display = "none";
-						mapIcon3.style.display = "none";
-						mapIcon4.style.display = "none";
-						tooltip.style.display = "none";
-						
-
-						// Show the popup
-						sideBar.style.display = "block";
-						sideBar.style.paddingTop="70px";
-						sideBar.style.position = "absolute";
-						sideBar.style.zIndex = "1";
-						sideBar.style.marginTop = "100px";
-						logoD.style.display ="none";
-					} else {
-						// Hide the popup
-						sideBar.style.display = "none";
-						// Restore original mobile grid layout
-						gridContainer.style.gridTemplateColumns = "1fr";
-						gridContainer.style.gridTemplateRows = "1fr 10fr";
-						mapView.style.display = "none";
-						mapIcon2.style.display = "block";
-						mapIcon3.style.display = "block";
-						mapIcon4.style.display = "block";
-						mapIcons.style.top = "5%";
-						mapIcons.style.left="0%";
-					}
-				} else {
-					if (isGridChanged) {
-						gridContainer.style.gridTemplateColumns = "1fr";
-						gridContainer.style.gridTemplateRows = "1fr 10fr";
-						sideBar.style.display = "none";
-						navBar.style.order = "1";
-						map.style.order = "2";
-						iconImg.src = "./assets/map11.svg";
-						mapView.style.position = "absolute";
-						mapView.style.display = "block";
-						logoM.style.display = "block";
-						logoM.style.position = "absolute";
-						logoM.style.top = "0";
-						logoM.style.left = "10px";
-						navH1.style.paddingLeft = "400px";
-						
-					} else {
-						gridContainer.style.gridTemplateColumns = "1fr 5fr";
-						gridContainer.style.gridTemplateRows = "1fr 10fr";
-						sideBar.style.order = "1";
-						sideBar.style.display = "block";
-						navBar.style.order = "2";
-						map.style.order = "3";
-						iconImg.src = "./assets/map1.svg";
-						mapView.style.display = "none";
-						logoM.style.display = "none";
-						navH1.style.paddingLeft = "150px";
-					}
-				}
-				isGridChanged = !isGridChanged; // Toggle the state
-			}
+        <!-- import script -->
+        <script src="./scripts.js">
+        </script>
 
 
-
-			//function for search bar
-			const searchBar = document.getElementById("searchBarr");
-			const feature = document.getElementById("feature");
-			const iconRight = document.getElementById("icon-right");
-			const companies = document.getElementById("companies");
-			const tooltip = document.getElementById("tooltip");
-			const areaContainer = document.getElementById("container-1");
-			//add event listner for the search input
-			searchBar.addEventListener("input", function (event) {
-				const searchText = event.target.value;
-				console.log("Search text:", iconRight);
-				feature.style.display = "block";
-				companies.style.display = "block";
-				iconRight.src = "./assets/cross.png";
-				// areaContainer.style.overflow = "hidden";
-			});
-
-			// Add event listener for the cross icon click
-			iconRight.addEventListener("click", function () {
-				// Hide the elements
-				feature.style.display = "none";
-				companies.style.display = "none";
-				tooltip.style.visibility = "hidden";
-				// areaContainer.style.overflow = "hidden"
-
-				// Reset the icon source
-				iconRight.src = "./assets/tabler_direction-sign.svg";
-
-				// Clear the search input field
-				searchBar.value = "";
-			});
-
-			//add event listner for search bar click
-			searchBar.addEventListener("click", function (event) {
-				tooltip.style.visibility = "visible";
-			});
-		</script>
-
-		<!-- script for close card popup -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const overlay = document.getElementById("background-overlay");
-				const popupCard1 = document.getElementById("pop-up-card-1");
-				const popupCard2 = document.getElementById("pop-up-card-2");
-				const popupCard3 = document.getElementById("pop-up-card-3");
-				const popupCard4 = document.getElementById("pop-up-card-4");
-				const popupCard5 = document.getElementById("pop-up-card-5");
-				const popupCard6 = document.getElementById("pop-up-card-6");
-				const popupCard7 = document.getElementById("pop-up-card-7");
-				const closePopupButton1 = document.getElementById("close-popup1");
-				const closePopupButton2 = document.getElementById("close-popup2");
-				const closePopupButton3 = document.getElementById("close-popup3");
-				const closePopupButton4 = document.getElementById("close-popup4");
-				const closePopupButton5 = document.getElementById("close-popup5");
-				const closePopupButton6 = document.getElementById("close-popup6");
-				const closePopupButton7 = document.getElementById("close-popup7");
-
-				closePopupButton1.addEventListener("click", function () {
-					popupCard1.style.display = "none";
-				});
-
-				closePopupButton2.addEventListener("click", function () {
-					popupCard2.style.display = "none";
-				});
-
-				closePopupButton3.addEventListener("click", function () {
-					popupCard3.style.display = "none";
-				});
-
-				closePopupButton4.addEventListener("click", function () {
-					popupCard4.style.display = "none";
-				});
-
-				closePopupButton5.addEventListener("click", function () {
-					popupCard5.style.display = "none";
-				});
-				closePopupButton6.addEventListener("click", function () {
-					popupCard6.style.display = "none";
-				});
-				closePopupButton7.addEventListener("click", function () {
-					popupCard7.style.display = "none";
-				});
-			});
-
-			// function for showing popup cards
-			const popupCard1 = document.getElementById("pop-up-card-1");
-			function showPopUp1() {
-				popupCard1.style.display = "block";
-			}
-
-			const popupCard2 = document.getElementById("pop-up-card-2");
-			function showPopUp2() {
-				popupCard2.style.display = "block";
-			}
-
-			const popupCard3 = document.getElementById("pop-up-card-3");
-			function showPopUp3() {
-				popupCard3.style.display = "block";
-			}
-			const popupCard4 = document.getElementById("pop-up-card-4");
-			function showAssetPopUp1() {
-				popupCard4.style.display = "block";
-			}
-			const popupCard5 = document.getElementById("pop-up-card-5");
-			function showAssetPopUp2() {
-				popupCard5.style.display = "block";
-			}
-			const popupCard6 = document.getElementById("pop-up-card-6");
-			function showNavPopUp1() {
-				popupCard6.style.display = "block";
-				overlay.style.display = "block";
-			}
-			const popupCard7 = document.getElementById("pop-up-card-7");
-			function showNavPopUp2() {
-				popupCard7.style.display = "block";
-				overlay.style.display = "block";
-			}
-		</script>
-
-		<!-- //script  tree views for companies -->
+        	<!-- //script  tree views for companies -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			$(function () {
@@ -1116,5 +878,5 @@
 				});
 			});
 		</script>
-	</body>
-</html>
+    </body>
+    </html>
