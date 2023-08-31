@@ -42,7 +42,7 @@
 				class="grid-item side-bar"
 				id="side-bar">
 				<!-- logo  container -->
-				<div class="logo logo-desktop">
+				<div class="logo logo-desktop" id="logo-desktop">
 					<img
 						src="assets/Logo.png"
 						class="logo"
@@ -242,7 +242,7 @@
 						<button class="dropdown-button">Map Layers</button>
 
 						<!-- dropdown items-->
-						<div class="sub-header"><u>Selected Company Layers</u></div>
+						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>Selected Company Layers</u></div>
 						<div class="dropdown-items">
 							<button class="button-item button-icon2">
 								<img src="./assets/image 1.svg" /><span
@@ -260,7 +260,7 @@
 							</button>
 						</div>
 
-						<div class="sub-header"><u>All Layers</u></div>
+						<div class="sub-header"><img class="sub-icon"  src="./assets/fluent-mdl2_map-layers.png"><u>All Layers</u></div>
 						<div class="dropdown-items">
 							<button class="button-item button-icon2">
 								<img src="./assets/game-icons_mining-helmet.svg" />Featured
@@ -365,12 +365,32 @@
 				class="grid-item nav-container"
 				id="nav-bar">
 				<nav class="nav-bar">
+					<!-- logo for desktop view button click  -->
+					<div
+					class="logo logo-desktop-click"
+					id="logo-mobile">
+					<img
+						src="assets/Logo.png"
+						class="logo"
+						alt="Logo" />
+				</div>
 					<h1
 						class="header-desktop"
 						id="nav-header">
 						Exploration Activity Maps
 					</h1>
+					
 					<div class="header-mobile">
+						<!-- logo mobile view -->
+						<div
+							class="logo logo-mobile"
+							id="logo-mobile-ss">
+							<img
+								src="assets/Logo.png"
+								class="logo"
+								alt="Logo" />
+						</div>
+						
 						<h1>Exploration Activity Maps</h1>
 						<button
 							class="toggle-button"
@@ -378,16 +398,9 @@
 							&#9776;
 						</button>
 					</div>
+						
 					<div class="header">
-						<!-- logo mobile view -->
-						<div
-							class="logo logo-mobile"
-							id="logo-mobile">
-							<img
-								src="assets/Logo.png"
-								class="logo"
-								alt="Logo" />
-						</div>
+						
 
 						<ul
 							class="nav-links"
@@ -891,17 +904,21 @@
 						map.style.display = "block";
 						navBar.style.display = "block";
 						mapView.style.display = "none";
-						mapIcons.style.top = "5%";
+						mapIcons.style.top = "3%";
+						mapIcons.style.left="300px";
 						mapIcon2.style.display = "none";
 						mapIcon3.style.display = "none";
 						mapIcon4.style.display = "none";
 						tooltip.style.display = "none";
+						
 
 						// Show the popup
 						sideBar.style.display = "block";
+						sideBar.style.paddingTop="70px";
 						sideBar.style.position = "absolute";
 						sideBar.style.zIndex = "1";
-						sideBar.style.marginTop = "20%";
+						sideBar.style.marginTop = "90px";
+						logoD.style.display ="none";
 					} else {
 						// Hide the popup
 						sideBar.style.display = "none";
@@ -912,7 +929,8 @@
 						mapIcon2.style.display = "block";
 						mapIcon3.style.display = "block";
 						mapIcon4.style.display = "block";
-						mapIcons.style.top = "30%";
+						mapIcons.style.top = "5%";
+						mapIcons.style.left="0%";
 					}
 				} else {
 					if (isGridChanged) {
@@ -929,6 +947,7 @@
 						logoM.style.top = "0";
 						logoM.style.left = "10px";
 						navH1.style.paddingLeft = "400px";
+						
 					} else {
 						gridContainer.style.gridTemplateColumns = "1fr 5fr";
 						gridContainer.style.gridTemplateRows = "1fr 10fr";
