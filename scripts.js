@@ -87,49 +87,19 @@ searchBar.addEventListener("click", function (event) {
 
 
 // <!-- script for close card popup -->
-
+  
 document.addEventListener("DOMContentLoaded", function () {
-    const overlay = document.getElementById("background-overlay");
-    const popupCard1 = document.getElementById("pop-up-card-1");
-    const popupCard2 = document.getElementById("pop-up-card-2");
-    const popupCard3 = document.getElementById("pop-up-card-3");
-    const popupCard4 = document.getElementById("pop-up-card-4");
-    const popupCard5 = document.getElementById("pop-up-card-5");
-    const popupCard6 = document.getElementById("pop-up-card-6");
-    const popupCard7 = document.getElementById("pop-up-card-7");
-    const closePopupButton1 = document.getElementById("close-popup1");
-    const closePopupButton2 = document.getElementById("close-popup2");
-    const closePopupButton3 = document.getElementById("close-popup3");
-    const closePopupButton4 = document.getElementById("close-popup4");
-    const closePopupButton5 = document.getElementById("close-popup5");
-    const closePopupButton6 = document.getElementById("close-popup6");
-    const closePopupButton7 = document.getElementById("close-popup7");
+    const popupCards =  document.querySelectorAll(".popup-card-div");
+    const popupClose = document.querySelectorAll(".popup-close-button")
+    
+   for (let index = 0; index < popupCards.length; index++) {
+   
+    popupClose[index].addEventListener("click", function () {
+        popupCards[index].style.display = "none";
+    });
+   }
 
-    closePopupButton1.addEventListener("click", function () {
-        popupCard1.style.display = "none";
-    });
 
-    closePopupButton2.addEventListener("click", function () {
-        popupCard2.style.display = "none";
-    });
-
-    closePopupButton3.addEventListener("click", function () {
-        popupCard3.style.display = "none";
-    });
-
-    closePopupButton4.addEventListener("click", function () {
-        popupCard4.style.display = "none";
-    });
-
-    closePopupButton5.addEventListener("click", function () {
-        popupCard5.style.display = "none";
-    });
-    closePopupButton6.addEventListener("click", function () {
-        popupCard6.style.display = "none";
-    });
-    closePopupButton7.addEventListener("click", function () {
-        popupCard7.style.display = "none";
-    });
 });
 
 // function for showing popup cards
