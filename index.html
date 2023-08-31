@@ -375,6 +375,7 @@
 						alt="Logo" />
 				</div>
 					<h1
+
 						class="header-desktop"
 						id="nav-header">
 						Exploration Activity Maps
@@ -904,7 +905,8 @@
 						map.style.display = "block";
 						navBar.style.display = "block";
 						mapView.style.display = "none";
-						mapIcons.style.top = "3%";
+						mapIcons.style.top = "2%";
+						mapIcon1.style.paddingBottom = "5px";
 						mapIcons.style.left="300px";
 						mapIcon2.style.display = "none";
 						mapIcon3.style.display = "none";
@@ -917,7 +919,7 @@
 						sideBar.style.paddingTop="70px";
 						sideBar.style.position = "absolute";
 						sideBar.style.zIndex = "1";
-						sideBar.style.marginTop = "90px";
+						sideBar.style.marginTop = "100px";
 						logoD.style.display ="none";
 					} else {
 						// Hide the popup
@@ -963,6 +965,8 @@
 				}
 				isGridChanged = !isGridChanged; // Toggle the state
 			}
+
+
 
 			//function for search bar
 			const searchBar = document.getElementById("searchBarr");
