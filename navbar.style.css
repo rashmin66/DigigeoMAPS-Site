@@ -8,16 +8,21 @@ body {
 	margin: 0px;
 	overflow: hidden;
 }
+.main-container{
+    height: 98vh;
+}
 /* create a two-column layout */
 .column-div {
     display: flex;
     justify-content: space-between; 
     align-items: center;
     grid-template-columns: 300px auto !important;
+    
   }
   
 .column {
     padding: 0 2px; /* Add padding between columns */
+    
   }
   
 /** navbar styles **/

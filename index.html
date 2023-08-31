@@ -38,7 +38,8 @@
 	</head>
 
 	<body>
-<!--*** navbar grid start***-->
+        <div class="main-container">
+       <!--*** navbar  start***-->
 		
 			<div
 				class="nav-container"
@@ -571,6 +572,7 @@
         </div>
         <!--*** map grid end***-->
    </div>
+   </div>
 
 <!-- card components section start-->
 <div class="card-div">
@@ -845,39 +847,15 @@
 </div>
 <!-- card components section end-->
 
+        
+
+        	<!-- //script  tree views for companies -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
         <!-- import script -->
         <script src="./scripts.js">
         </script>
 
-
-        	<!-- //script  tree views for companies -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script>
-			$(function () {
-				$(".tree li:has(ul)")
-					.addClass("parent_li")
-					.find(" > span")
-					.attr("title", "Collapse this branch");
-				$(".tree li.parent_li > span").on("click", function (e) {
-					var children = $(this).parent("li.parent_li").find(" > ul > li");
-					if (children.is(":visible")) {
-						children.hide("fast");
-						$(this)
-							.attr("title", "Expand this branch")
-							.find(" > i")
-							.addClass("fas fa-angle-right")
-							.removeClass("fas fa-angle-down");
-					} else {
-						children.show("fast");
-						$(this)
-							.attr("title", "Collapse this branch")
-							.find(" > i")
-							.addClass("fas fa-angle-down")
-							.removeClass("fas fa-angle-right");
-					}
-					e.stopPropagation();
-				});
-			});
-		</script>
+	
     </body>
     </html>
