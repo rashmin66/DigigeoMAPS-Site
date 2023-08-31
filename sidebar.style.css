@@ -29,6 +29,9 @@
 	color: #206eb9;
 	margin-left: 10%;
 }
+.sidebar-container-before{
+	display: none;
+}
 .sub-icon{
 	margin-right: 3%;
 	margin-top: 2%;
@@ -480,8 +483,8 @@
 	position: absolute;
 	z-index: 1;
 	background-color: var(--primary-color);
-	margin-top: 100px;
-	padding-top: 20px;
+	top: 80px;
+	padding-top: 50px;
 }
 
 .custom-button {
@@ -491,4 +494,20 @@
 .search-bar {
     position: relative;
 }
+.scroll-bar {
+	max-height: 500px;
+	padding-bottom: 15px !important;
+}
+.companies {
+	margin-left: 5%;
+}
+.tooltip .tooltiptext {
+	display: none;
+}
+}
+@media screen and (max-width: 321px) {
+	.side-bar {
+		margin-top: 40% !important;
+		max-height: 450px;
+	}
 }

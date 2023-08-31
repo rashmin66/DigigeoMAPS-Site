@@ -29,17 +29,20 @@ function handleIconClick(iconNumber) {
 }
 
 //function for grid change when button click
-let isGridChanged = true;
+let isGridChanged = false;
 function changeGrid() {
     const sideBar = document.getElementById("side-bar");
+    const mapview = document.getElementById("map-View")
    
         if (isGridChanged) {
             // Show the popup
             sideBar.style.display = "block";
+            mapview.style.display = "none";
 
         } else {
             // Hide the popup
             sideBar.style.display = "none";
+            mapview.style.display = "block";
     }
     isGridChanged = !isGridChanged; // Toggle the state
 }
