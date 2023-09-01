@@ -5,7 +5,6 @@
     height: 100%;
 	height: 90vh;
     width:100vw;
-   
 }
 
 .map iframe {
@@ -27,6 +26,9 @@
 	cursor: pointer;
 	padding: 0px !important;
 	margin: 0px !important;
+}
+.icon1-mobile{
+	display: none;
 }
 .mapView {
 	left: 20px;
@@ -51,6 +53,12 @@
 	.map-icons-list{
 		display: none;
 	}
+	.icon1-desktop{
+		display: none;
+	}
+	.icon1-mobile{
+		display: block;
+	}
 	.mapView {
 		display: none;
 		visibility: hidden;
@@ -63,7 +71,6 @@
 	.mobile-mapView {
 		display: none;
 	}
-	
 }
 
 @media screen and (max-width: 440px) {
@@ -71,6 +78,11 @@
 		height: 87vh;
 	}
 }
+/* @media screen and (max-width: 280px) {
+    .map iframe {
+		width: 100vw;
+	}
+} */
 
 @media screen and (min-width: 1680px) {
 	.map iframe {
@@ -80,17 +92,9 @@
 
 
 /* tool tip */
-/* .tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px dotted black;
-} */
-
 .tooltip .tooltiptext {
 	visibility: hidden;
-	padding: 5%;
-	padding-left: 15% !important;
-	padding-bottom: 2% !important;
+	padding: 25% !important;
 	margin: 10px;
 	width: 120px;
 	background-color: rgba(0, 0, 0, 0.877);
@@ -116,20 +120,8 @@
 	z-index: 1500;
 }
 .tooltip .div {
-	cursor: pointer;
+	cursor: pointer !important;
+	margin-bottom: 5% !important;
 }
 
-/* width of the vertical scrollbar */
-::-webkit-scrollbar {
-	width: 5px;
-}
 
-::-webkit-scrollbar-thumb {
-	background-color: #888;
-	border-radius: 5px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: #f1f1f1;
-	border-radius: 5px;
-}

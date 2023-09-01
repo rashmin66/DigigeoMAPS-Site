@@ -36,24 +36,27 @@ function handleIconClick(iconNumber) {
 }
 
 //function for grid change when button click
-let isGridChanged = false;
+let isGridChanged = true;
 function changeGrid() {
     const sideBar = document.getElementById("side-bar");
     const mapview = document.getElementById("map-View");
-    const arrowIcon = document.getElementById("iconImage");
+    const arrowIconD = document.getElementById("iconImageD");
+    const arrowIconM = document.getElementById("iconImageM");
    
         if (isGridChanged) {
             // Show the popup
             sideBar.style.display = "block";
             mapview.style.display = "none";
-            arrowIcon.src = "./assets/map1.svg";
+            arrowIconD.src = "./assets/map1.svg";
+            arrowIconM.src = "./assets/map1.svg";
 
 
         } else {
             // Hide the popup
             sideBar.style.display = "none";
             mapview.style.display = "block";
-            arrowIcon.src = "./assets/map11.svg";
+            arrowIconD.src = "./assets/map11.svg";
+            arrowIconM.src = "./assets/map11.svg";
     }
     isGridChanged = !isGridChanged; // Toggle the state
 }

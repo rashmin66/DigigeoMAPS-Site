@@ -15,9 +15,7 @@ body {
 .column-div {
     display: flex;
     justify-content: space-between; 
-    align-items: center;
     grid-template-columns: 300px auto !important;
-
     
   }
   
@@ -147,5 +145,10 @@ body {
 @media screen and (max-width: 440px) {
     .header-mobile h1 {
         font-size: 18px;
+    }
+    .logo {
+        width: 100px;
+        height: 45px;
+        padding-left: 2px !important;
     }
     }
