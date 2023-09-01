@@ -168,7 +168,7 @@
 	background-origin: content-box;
 }
 .button-icon2 {
-	background-image: url("./assets/eye.svg"); /* add info icon */
+	background-image: url("./assets/eye.svg"); /* add eye icon */
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
@@ -438,6 +438,7 @@
 .card-div2 .special {
 	font-family: Dongle, sans-serif !important;
 	background-color: #23619b !important;
+	padding: 2% 17% 12% 17%;
 	color: #ffffff;
 	margin-bottom: 5px;
 	border: 0px solid rgb(0, 0, 0);
@@ -541,7 +542,7 @@
 }
 .scroll-bar {
     padding: 3px;
-	padding-bottom: 100px !important;
+	padding-bottom: 10px !important;
 }
 .search-input {
     padding-left: 11%;

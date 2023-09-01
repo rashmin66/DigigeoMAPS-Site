@@ -1,4 +1,4 @@
-// functions for change custom buttons color when onlick
+// functions for change custom buttons colors when onclick
 function toggleHighlight(button) {
     const buttons = document.querySelectorAll(".custom-button");
     const containers = document.querySelectorAll(".sidebar-container");
@@ -13,7 +13,7 @@ function toggleHighlight(button) {
     button.classList.toggle("highlighted");
 }
 
-// Highlight area when the page loads
+// Highlight button area when the page loads
 window.onload = function () {
     const buttonToHighlight = document.getElementById("0");
     toggleHighlight(buttonToHighlight);
@@ -31,12 +31,12 @@ toggleButton.addEventListener("click", function () {
 });
 
 //function for mapicon handle
-function handleIconClick(iconNumber) {
-    console.log("Icon " + iconNumber + " clicked.");
-}
+// function handleIconClick(iconNumber) {
+//     console.log("Icon " + iconNumber + " clicked.");
+// }
 
 //function for grid change when button click
-let isGridChanged = true;
+let isGridChanged = false;
 function changeGrid() {
     const sideBar = document.getElementById("side-bar");
     const mapview = document.getElementById("map-View");
@@ -60,6 +60,24 @@ function changeGrid() {
     }
     isGridChanged = !isGridChanged; // Toggle the state
 }
+   
+
+// eye icon change when button click
+let isImage1 = true;
+function changeBackgroundImage(element) {
+    const image1Url = "url('./assets/eye.svg')";
+    const image2Url = "url('./assets/eyeOpen.svg')"; 
+
+    // toggle between the two images
+    if (isImage1) {
+        element.style.backgroundImage = image2Url;
+    } else {
+        element.style.backgroundImage = image1Url;
+    }
+
+    isImage1 = !isImage1;
+}
+
 
 
 
