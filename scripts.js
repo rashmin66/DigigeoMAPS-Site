@@ -79,8 +79,6 @@ function changeBackgroundImage(element) {
 }
 
 
-
-
 //function for search bar
 const searchBar = document.getElementById("searchBarr");
 const feature = document.getElementById("feature");
@@ -98,7 +96,7 @@ searchBar.addEventListener("input", function (event) {
     
 });
 
-// Add event listener for the cross icon click
+// Add event listener for the search bar cross icon click
 iconRight.addEventListener("click", function () {
     // Hide the elements
     feature.style.display = "none";
@@ -118,8 +116,7 @@ searchBar.addEventListener("click", function (event) {
 });
 
 
-// <!-- script for close card popup -->
-  
+// <!-- script for card popup close --> 
 document.addEventListener("DOMContentLoaded", function () {
     const popupCards =  document.querySelectorAll(".popup-card-div");
     const popupClose = document.querySelectorAll(".popup-close-button")
@@ -130,8 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
         popupCards[index].style.display = "none";
     });
    }
-
-
 });
 
 // function for showing popup cards

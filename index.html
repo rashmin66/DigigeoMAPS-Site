@@ -38,13 +38,12 @@
 	</head>
 
 	<body>
-        <div class="main-container">
-       <!--*** navbar  start***-->
-		
-			<div
-				class="nav-container"
-				id="nav-bar">
-				<nav class="nav-bar">
+       
+    <div class="main-container"> <!-- main container start -->
+
+      
+	    <div class="nav-container" id="nav-bar"> <!--***navbar container start ***-->
+                <nav class="nav-bar">
 					<!-- logo for desktop view button click  -->
 					<div
 					class="logo logo-desktop-click"
@@ -125,16 +124,11 @@
 						</ul>
 					</div>
 				</nav>
-			</div>
-			
-			<!--*** navbar grid end***-->
+	    </div>	<!--*** navbar container end ***-->
+		
+        <div class="column-div"> <!-- column div start -->
 
-<div class="column-div">
-
-        <!--*** side-bar grid start***-->
-        <div
-        class="side-bar column"
-        id="side-bar">
+        <div class="side-bar column" id="side-bar"><!--*** side-bar container start***-->
 
         <div class="scroll-bar">
             <!-- button container -->
@@ -446,16 +440,10 @@
                 </div>
             </div>
         </div>
-        </div>
-    <!--*** side-bar grid end***-->
 
-
-
-
-      <!--*** map grid start***-->
-			<div
-            class="map column"
-            id="map">
+        </div>  <!--*** side-bar container end***-->
+      
+		<div class="map column" id="map"><!--*** map container start***-->
 
             <!-- mapview custom-buttons -->
             <div
@@ -537,7 +525,7 @@
                         id="iconImageD"
                         class="icon1-desktop"
                         alt="Icon 1" />
-                        <img
+                    <img
                         src="./assets/map11.svg"
                         id="iconImageM"
                         class="icon1-mobile"
@@ -578,13 +566,15 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-        </div>
-        <!--*** map grid end***-->
-   </div>
-   </div>
+        </div><!--*** map container end***-->
+        
+        </div><!-- column div end -->
+        
 
-<!-- card components section start-->
-<div class="card-div">
+    </div><!-- main container end -->
+  
+  
+     <div class="card-div">  <!--popup card components section start-->
     <!-- card popup for feature ciri company -->
     <div
         class="card-div1 popup-card-div"
@@ -850,18 +840,14 @@
             reprinting or any form of reproduction must have prior permission.
         </div>
     </div>
-</div>
-<!-- card components section end-->
-
+     </div><!--popup card components section end-->
         
 
-        	<!-- //script  tree views for companies -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- //jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         
-        <!-- import script -->
-        <script src="./scripts.js">
-        </script>
+    <!-- import script -->
+    <script src="./scripts.js"> </script>
 
-	
     </body>
     </html>
