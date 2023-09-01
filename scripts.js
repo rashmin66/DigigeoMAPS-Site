@@ -13,6 +13,13 @@ function toggleHighlight(button) {
     button.classList.toggle("highlighted");
 }
 
+// Highlight area when the page loads
+window.onload = function () {
+    const buttonToHighlight = document.getElementById("0");
+    toggleHighlight(buttonToHighlight);
+};
+
+
 //   function for navbar-links mobile view
 const toggleButton = document.getElementById("toggleButton");
 const navLinks = document.getElementById("navLinks");
@@ -32,17 +39,21 @@ function handleIconClick(iconNumber) {
 let isGridChanged = false;
 function changeGrid() {
     const sideBar = document.getElementById("side-bar");
-    const mapview = document.getElementById("map-View")
+    const mapview = document.getElementById("map-View");
+    const arrowIcon = document.getElementById("iconImage");
    
         if (isGridChanged) {
             // Show the popup
             sideBar.style.display = "block";
             mapview.style.display = "none";
+            arrowIcon.src = "./assets/map1.svg";
+
 
         } else {
             // Hide the popup
             sideBar.style.display = "none";
             mapview.style.display = "block";
+            arrowIcon.src = "./assets/map11.svg";
     }
     isGridChanged = !isGridChanged; // Toggle the state
 }

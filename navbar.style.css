@@ -17,11 +17,12 @@ body {
     justify-content: space-between; 
     align-items: center;
     grid-template-columns: 300px auto !important;
+
     
   }
   
 .column {
-    padding: 0 2px; /* Add padding between columns */
+    padding: 0px 5px; /* Add padding between columns */
     
   }
   
