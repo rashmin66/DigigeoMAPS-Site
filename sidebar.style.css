@@ -300,9 +300,9 @@
 	padding-left: 20px;
 	width: 0px !important;
 }
-.tree li:last-child::after {
+/* .tree li:last-child::after {
 	width: 8px !important;
-}
+} */
 .tree li.parent_li > span:hover,
 .tree li.parent_li > span:hover + ul li span {
 	/* background:#eee; */
@@ -325,6 +325,10 @@
 }
 .li-new::before{
 	padding-inline-start: 50px !important;
+}
+.li-new::after{
+    width:8px !important;
+	height: 50px !important;
 }
 .amanita-text{
 	padding-left: 12px !important;
