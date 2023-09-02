@@ -264,7 +264,7 @@
 .tree li::before {
 	border-left: 2px solid #9999999f;
 	bottom: 30px;
-	height: 100%;
+	height: 100px;
 	top: 0;
 	width: 0px;
 }
@@ -324,7 +324,8 @@
 	margin:0px !important;
 }
 .tree .sub-ul {
-	/* padding-inline-start: 10px !important; */
+	top: 0 !important;
+	padding-inline-start: 15px !important;
 	margin: 0px !important;
 }
 .li-new::before{
