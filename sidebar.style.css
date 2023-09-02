@@ -257,7 +257,7 @@
 .tree li::before,
 .tree li::after {
 	content: "";
-	left: -34px;
+	left: -14px;
 	position: absolute;
 	right: auto;
 }
@@ -272,7 +272,7 @@
 	border-top: 2px solid #44444454;
 	height: 20px;
 	top: 20px;
-	width: 15px;
+	width: 1px;
 }
 .tree li span {
 	/* -moz-border-radius:5px;
@@ -280,7 +280,7 @@
     border:1px solid #999; */
 	/* border-radius:5px; */
 	display: inline-block;
-	padding: 2px 5px;
+	padding: 2px 0px;
 	text-decoration: none;
 }
 .tree li.parent_li > span {
@@ -291,7 +291,8 @@
 	border: 0;
 }
 .tree li:last-child::before {
-	height: 20px;
+	height: 25px;
+	padding-left: 20px;
 }
 .tree li.parent_li > span:hover,
 .tree li.parent_li > span:hover + ul li span {
@@ -303,6 +304,17 @@
 	text-decoration: underline;
 	color: blue;
 	display: inline;
+}
+.tree ul {
+	padding-inline-start:20px !important;
+	margin:0px !important;
+}
+.tree .sub-ul {
+	/* padding-inline-start: 10px !important; */
+	margin: 0px !important;
+}
+.li-new::before{
+	padding-inline-start: 50px !important;
 }
 .amanita-text{
 	padding-left: 12px !important;
@@ -514,7 +526,7 @@
 	
 }
 .companies {
-	margin-left: 5%;
+	margin-left: 1%;
 }
 .tooltip .tooltiptext {
 	display: none;
