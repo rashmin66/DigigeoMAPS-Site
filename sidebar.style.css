@@ -272,7 +272,11 @@
 	border-top: 2px solid #44444454;
 	height: 20px;
 	top: 20px;
-	width: 1px;
+	width: 8px;
+}
+.tree li.parent_li::before {
+	border-top: 0px solid #44444454;
+	height: 100px !important;
 }
 .tree li span {
 	/* -moz-border-radius:5px;
@@ -291,14 +295,16 @@
 	border: 0;
 }
 .tree li:last-child::before {
-	height: 25px;
+	height: 20px;
 	padding-left: 20px;
+	width: 0px;
 }
 .tree li.parent_li > span:hover,
 .tree li.parent_li > span:hover + ul li span {
 	/* background:#eee; */
 	/* border:1px solid #94a0b4; */
 	color: #000;
+
 }
 .tree .link {
 	text-decoration: underline;
