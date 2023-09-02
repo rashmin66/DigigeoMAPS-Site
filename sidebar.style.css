@@ -276,9 +276,13 @@
 }
 .tree li.parent_li::before {
 	border-top: 0px solid #44444454;
-	height: 100px !important;
+	height: 100% !important;
 }
 
+/* .tree li.parent_li::after {
+	border-top: 0px solid #44444454;
+	height: 100% !important;
+} */
 .tree li span {
 	/* -moz-border-radius:5px;
     -webkit-border-radius:5px;
