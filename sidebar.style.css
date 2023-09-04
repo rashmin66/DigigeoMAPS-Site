@@ -1,13 +1,17 @@
-/**  sidebar styles **/
+/**
+ * sidebar styles *
+ *
+ * @format
+ */
+
 .side-bar {
-    height: 85vh;
+	height: 85vh;
 	padding: 12px;
 	height: 100%;
 	border-radius: 0px 15px 0px 0px;
 	border: 2px solid #b8b6b644;
 	border-bottom: none;
 	box-shadow: 0px #38383844 !important;
-
 }
 .scroll-bar {
 	z-index: 1;
@@ -19,7 +23,6 @@
 	overflow-x: hidden;
 	padding: 5px;
 	margin-bottom: 15px !important;
-	
 }
 .sub-header {
 	padding: 5px !important;
@@ -30,10 +33,10 @@
 	color: #206eb9;
 	margin-left: 10%;
 }
-.sidebar-container-before{
+.sidebar-container-before {
 	display: none;
 }
-.sub-icon{
+.sub-icon {
 	margin-right: 3%;
 	margin-top: 2%;
 }
@@ -161,14 +164,14 @@
 	margin: auto;
 }
 .button-icon1 {
-	background-image: url("./assets/info.svg"); /* add info icon */
+	background-image: url('./assets/info.svg'); /* add info icon */
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
 	background-origin: content-box;
 }
 .button-icon2 {
-	background-image: url("./assets/eye.svg"); /* add eye icon */
+	background-image: url('./assets/eye.svg'); /* add eye icon */
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
@@ -256,7 +259,7 @@
 }
 .tree li::before,
 .tree li::after {
-	content: "";
+	content: '';
 	left: -14px;
 	position: absolute;
 	right: auto;
@@ -276,6 +279,7 @@
 }
 .tree li.parent_li::before {
 	border-top: 0px solid #44444454;
+
 	height: 100% !important;
 }
 
@@ -312,7 +316,6 @@
 	/* background:#eee; */
 	/* border:1px solid #94a0b4; */
 	color: #000;
-
 }
 .tree .link {
 	text-decoration: underline;
@@ -320,24 +323,32 @@
 	display: inline;
 }
 .tree ul {
-	padding-inline-start:20px !important;
-	margin:0px !important;
+	padding-inline-start: 20px !important;
+	margin: 0px !important;
 }
 .tree .sub-ul {
 	top: 0 !important;
 	padding-inline-start: 15px !important;
 	margin: 0px !important;
 }
-.li-new::before{
+.li-new::before {
 	padding-inline-start: 50px !important;
+	top: -34px !important;
+	height: 54px !important;
 }
-.li-new::after{
-    width:8px !important;
+.li-new::after {
+	width: 8px !important;
 	height: 50px !important;
 }
-.amanita-text{
+.amanita-text {
 	padding-left: 12px !important;
+	top: 10 !important;
+	height: 10px !important;
 }
+/* 
+.tree li li li.parent_li::before {
+	border-left: 2px solid #9999999f !important;
+} */
 
 /* //card component styles */
 .card-div1 {
@@ -413,8 +424,7 @@
 	border-radius: 20px;
 	padding: 2px 20px 2px 20px;
 }
-.bluetext
-{
+.bluetext {
 	color: #2600ff;
 	font-size: 19px;
 	font-family: Dongle, sans-serif !important;
@@ -523,69 +533,69 @@
 
 /** sidebar container mobile styles **/
 @media screen and (max-width: 991px) {
-.side-bar {
-    display: none;
-	position: absolute;
-	z-index: 1;
-	background-color: var(--primary-color);
-	top: 70px;
-	padding-top: 50px;
-}
+	.side-bar {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		background-color: var(--primary-color);
+		top: 70px;
+		padding-top: 50px;
+	}
 
-.custom-button {
-    margin-top: 0px;
-}
+	.custom-button {
+		margin-top: 0px;
+	}
 
-.search-bar {
-    position: relative;
+	.search-bar {
+		position: relative;
+	}
+	.scroll-bar {
+		max-height: 500px !important;
+		padding-bottom: 15px !important;
+	}
+	.companies {
+		margin-left: 1%;
+	}
+	.tooltip .tooltiptext {
+		display: none;
+	}
 }
-.scroll-bar {
-	max-height: 500px !important;
-	padding-bottom: 15px !important;
-	
-}
-.companies {
-	margin-left: 1%;
-}
-.tooltip .tooltiptext {
+.popup-card-div {
 	display: none;
 }
-}
-.popup-card-div{
-	display: none;
-}
-.sidebar-container-before{
+.sidebar-container-before {
 	display: block;
 }
 @media screen and (max-width: 321px) {
 	.side-bar {
 		max-height: 550px;
-		width:250px;
+		width: 250px;
 	}
-	
-.custom-button {
-	font-size: 19px;
-	font-weight: 400;
-	padding-right: 5px;
-}
-.button-1, .button-2 {
-    margin-right: 3px;
-}
-.scroll-bar {
-    padding: 3px;
-	padding-bottom: 10px !important;
-}
-.search-input {
-    padding-left: 11%;
-	width: 88%;
-}
-.dropdown-button {
-    font-size: 18px;
-}
-.button-item {
-    font-size: 18px;
-}
-.sub-header {
-    font-size: 20px;
-}
+
+	.custom-button {
+		font-size: 19px;
+		font-weight: 400;
+		padding-right: 5px;
+	}
+	.button-1,
+	.button-2 {
+		margin-right: 3px;
+	}
+	.scroll-bar {
+		padding: 3px;
+		padding-bottom: 10px !important;
+	}
+	.search-input {
+		padding-left: 11%;
+		width: 88%;
+	}
+	.dropdown-button {
+		font-size: 18px;
+	}
+	.button-item {
+		font-size: 18px;
+	}
+	.sub-header {
+		font-size: 20px;
+	}
 }
