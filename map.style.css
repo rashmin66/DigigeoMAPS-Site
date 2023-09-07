@@ -51,7 +51,7 @@
 		left: 5px;
 	}
 	.map-icons-list{
-		display: none;
+		display: block;
 	}
 	.icon1-desktop{
 		display: none;
@@ -60,16 +60,17 @@
 		display: block;
 	}
 	.mapView {
-		display: none;
-		visibility: hidden;
-		top: 40px;
-		left: 20px;
+		/* display: none; */
+		/* visibility: hidden; */
+		top: 85px;
+		left: 50px;
 		display: block;
 		position: absolute;
 		z-index: 1;
 	}
+
 	.mobile-mapView {
-		display: none;
+		display:block;
 	}
 }
 

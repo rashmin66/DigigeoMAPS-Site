@@ -345,6 +345,7 @@
 	top: 10 !important;
 	height: 10px !important;
 }
+
 /* 
 .tree li li li.parent_li::before {
 	border-left: 2px solid #9999999f !important;
@@ -553,6 +554,10 @@
 		max-height: 500px !important;
 		padding-bottom: 15px !important;
 	}
+	.button-1,
+    .button-2 {
+	margin-right: 5px;
+    }
 	.companies {
 		margin-left: 1%;
 	}
@@ -598,4 +603,5 @@
 	.sub-header {
 		font-size: 20px;
 	}
+
 }

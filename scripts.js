@@ -42,6 +42,8 @@ function changeGrid() {
     const mapview = document.getElementById("map-View");
     const arrowIconD = document.getElementById("iconImageD");
     const arrowIconM = document.getElementById("iconImageM");
+    const mapIcon234 = document.getElementById("icon234");
+   
    
         if (isGridChanged) {
             // Show the popup
@@ -49,7 +51,8 @@ function changeGrid() {
             mapview.style.display = "none";
             arrowIconD.src = "./assets/map1.svg";
             arrowIconM.src = "./assets/map1.svg";
-
+            mapIcon234.style.display = "none";
+            
 
         } else {
             // Hide the popup
@@ -57,6 +60,8 @@ function changeGrid() {
             mapview.style.display = "block";
             arrowIconD.src = "./assets/map11.svg";
             arrowIconM.src = "./assets/map11.svg";
+            mapIcon234.style.display = "block";
+            
     }
     isGridChanged = !isGridChanged; // Toggle the state
 }
