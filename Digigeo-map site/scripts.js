@@ -1,0 +1,224 @@
+// functions for change custom buttons colors when onclick
+function toggleHighlight(button) {
+    const buttons = document.querySelectorAll(".custom-button");
+    const containers = document.querySelectorAll(".sidebar-container");
+    containers.forEach((container) => {
+        container.style.display = "none";
+    });
+    containers[button.id].style.display = "block";
+
+    buttons.forEach((element) => {
+        element.classList.remove("highlighted");
+    });
+    button.classList.toggle("highlighted");
+}
+
+// Highlight button area when the page loads
+window.onload = function () {
+    const buttonToHighlight = document.getElementById("0");
+    toggleHighlight(buttonToHighlight);
+};
+
+
+//   function for navbar-links mobile view
+// const toggleButton = document.getElementById("toggleButton");
+// const navLinks = document.getElementById("navLinks");
+// const sideBar = document.getElementById("side-bar");
+
+// toggleButton.addEventListener("click", function () {
+//     console.log(navLinks);
+//     navLinks.classList.toggle("show-nav");
+//     sideBar.style.top = "140px";
+//     console.log(toggleButton);
+// });
+
+// function for navbar-links toggle mobile view
+const toggleButton = document.getElementById("toggleButton");
+const navLinks = document.getElementById("navLinks");
+const sideBar = document.getElementById("side-bar");
+
+let isNavVisible = false;
+
+toggleButton.addEventListener("click", function () {
+    if (!isNavVisible) {
+        // Show navigation links
+        navLinks.classList.add("show-nav");
+        sideBar.style.top = "138px";
+    } else {
+        // Hide navigation links
+        navLinks.classList.remove("show-nav");
+        sideBar.style.top = "70px"; 
+    }
+    
+    // Toggle the state
+    isNavVisible = !isNavVisible;
+});
+
+
+//function for mapicon handle
+// function handleIconClick(iconNumber) {
+//     console.log("Icon " + iconNumber + " clicked.");
+// }
+
+//function for grid change when button click
+let isGridChanged = false;
+function changeGrid() {
+    const sideBar = document.getElementById("side-bar");
+    const mapview = document.getElementById("map-View");
+    const arrowIconD = document.getElementById("iconImageD");
+    const arrowIconM = document.getElementById("iconImageM");
+    // const mapIcon234 = document.getElementById("icon234");
+
+   
+   
+        if (isGridChanged) {
+            // Show the popup
+            sideBar.style.display = "block";
+            mapview.style.display = "none";
+            arrowIconD.src = "./assets/map1.svg";
+            arrowIconM.src = "./assets/map1.svg";
+            // mapIcon234.style.display = "none";
+            
+
+        } else {
+            // Hide the popup
+            sideBar.style.display = "none";
+            mapview.style.display = "block";
+            arrowIconD.src = "./assets/map11.svg";
+            arrowIconM.src = "./assets/map11.svg";
+            // mapIcon234.style.display = "block";
+            
+    }
+    isGridChanged = !isGridChanged; // Toggle the state
+}
+   
+
+// eye icon change when button click
+let isImage1 = true;
+function changeBackgroundImage(element) {
+    const image1Url = "url('./assets/eye.svg')";
+    const image2Url = "url('./assets/eyeOpen.svg')"; 
+
+    // toggle between the two images
+    if (isImage1) {
+        element.style.backgroundImage = image2Url;
+    } else {
+        element.style.backgroundImage = image1Url;
+    }
+
+    isImage1 = !isImage1;
+}
+
+
+//function for search bar
+const searchBar = document.getElementById("searchBarr");
+const feature = document.getElementById("feature");
+const iconRight = document.getElementById("icon-right");
+const companies = document.getElementById("companies");
+const tooltip = document.getElementById("tooltip");
+const areaContainer = document.getElementById("container-1");
+//add event listner for the search input
+searchBar.addEventListener("input", function (event) {
+    const searchText = event.target.value;
+    console.log("Search text:", iconRight);
+    feature.style.display = "block";
+    companies.style.display = "block";
+    iconRight.src = "./assets/cross.png";
+    
+});
+
+// Add event listener for the search bar cross icon click
+iconRight.addEventListener("click", function () {
+    // Hide the elements
+    feature.style.display = "none";
+    companies.style.display = "none";
+    tooltip.style.visibility = "hidden";
+
+    // Reset the icon source
+    iconRight.src = "./assets/tabler_direction-sign.svg";
+
+    // Clear the search input field
+    searchBar.value = "";
+});
+
+//add event listner for search bar click
+searchBar.addEventListener("click", function (event) {
+    tooltip.style.visibility = "visible";
+});
+
+
+// <!-- script for card popup close --> 
+document.addEventListener("DOMContentLoaded", function () {
+    const popupCards =  document.querySelectorAll(".popup-card-div");
+    const popupClose = document.querySelectorAll(".popup-close-button")
+    
+   for (let index = 0; index < popupCards.length; index++) {
+   
+    popupClose[index].addEventListener("click", function () {
+        popupCards[index].style.display = "none";
+    });
+   }
+});
+
+// function for showing popup cards
+const popupCard1 = document.getElementById("pop-up-card-1");
+function showPopUp1() {
+    popupCard1.style.display = "block";
+}
+
+const popupCard2 = document.getElementById("pop-up-card-2");
+function showPopUp2() {
+    popupCard2.style.display = "block";
+}
+
+const popupCard3 = document.getElementById("pop-up-card-3");
+function showPopUp3() {
+    popupCard3.style.display = "block";
+}
+const popupCard4 = document.getElementById("pop-up-card-4");
+function showAssetPopUp1() {
+    popupCard4.style.display = "block";
+}
+const popupCard5 = document.getElementById("pop-up-card-5");
+function showAssetPopUp2() {
+    popupCard5.style.display = "block";
+}
+const popupCard6 = document.getElementById("pop-up-card-6");
+function showNavPopUp1() {
+    popupCard6.style.display = "block";
+    overlay.style.display = "block";
+}
+const popupCard7 = document.getElementById("pop-up-card-7");
+function showNavPopUp2() {
+    popupCard7.style.display = "block";
+    overlay.style.display = "block";
+}
+
+//function for tree view
+$(function () {
+    $(".tree li:has(ul)")
+        .addClass("parent_li")
+        .find(" > span")
+        .attr("title", "Collapse this branch");
+    $(".tree li.parent_li > span").on("click", function (e) {
+        var children = $(this).parent("li.parent_li").find(" > ul > li");
+        if (children.is(":visible")) {
+            children.hide("fast");
+            $(this)
+                .attr("title", "Expand this branch")
+                .find(" > i")
+                .addClass("fas fa-angle-right")
+                .removeClass("fas fa-angle-down");
+        } else {
+            children.show("fast");
+            $(this)
+                .attr("title", "Collapse this branch")
+                .find(" > i")
+                .addClass("fas fa-angle-down")
+                .removeClass("fas fa-angle-right");
+        }
+        e.stopPropagation();
+    });
+});
+
+
