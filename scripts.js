@@ -21,14 +21,39 @@ window.onload = function () {
 
 
 //   function for navbar-links mobile view
+// const toggleButton = document.getElementById("toggleButton");
+// const navLinks = document.getElementById("navLinks");
+// const sideBar = document.getElementById("side-bar");
+
+// toggleButton.addEventListener("click", function () {
+//     console.log(navLinks);
+//     navLinks.classList.toggle("show-nav");
+//     sideBar.style.top = "140px";
+//     console.log(toggleButton);
+// });
+
+// function for navbar-links toggle mobile view
 const toggleButton = document.getElementById("toggleButton");
 const navLinks = document.getElementById("navLinks");
+const sideBar = document.getElementById("side-bar");
+
+let isNavVisible = false;
 
 toggleButton.addEventListener("click", function () {
-    console.log(navLinks);
-    navLinks.classList.toggle("show-nav");
-    console.log(toggleButton);
+    if (!isNavVisible) {
+        // Show navigation links
+        navLinks.classList.add("show-nav");
+        sideBar.style.top = "138px";
+    } else {
+        // Hide navigation links
+        navLinks.classList.remove("show-nav");
+        sideBar.style.top = "70px"; 
+    }
+    
+    // Toggle the state
+    isNavVisible = !isNavVisible;
 });
+
 
 //function for mapicon handle
 // function handleIconClick(iconNumber) {

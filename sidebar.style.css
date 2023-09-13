@@ -564,6 +564,10 @@
 	.tooltip .tooltiptext {
 		display: none;
 	}
+	/* Change the top position as needed */
+	/* #toggleButton:checked + .toggle-label + .sidebar {
+		top: 140px; 
+	  } */
 }
 .popup-card-div {
 	display: none;
@@ -575,6 +579,7 @@
 	.side-bar {
 		max-height: 550px;
 		width: 250px;
+		/* transition: top 0.3s ease; */
 	}
 
 	.custom-button {
